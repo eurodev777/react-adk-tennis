@@ -1,0 +1,6 @@
+{
+  "name": "ADK Tennis",
+  "description": "Centro de Treinamento de Tênis de alto rendimento no Itamirim Clube de Campo em Itajaí, SC, e novas unidades.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
