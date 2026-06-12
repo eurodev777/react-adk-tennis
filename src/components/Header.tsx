@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
       id="adk-main-header"
     >
       {/* Top microbar for contact info, hours, and live alerts */}
-      <div
+      {/* <div
         className="bg-zinc-950 border-b border-zinc-900 text-[11px] text-zinc-400 py-2 px-4 shadow-inner"
         id="header-topbar"
       >
@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Brand identity: ADK Tennis - Logo and Name */}
