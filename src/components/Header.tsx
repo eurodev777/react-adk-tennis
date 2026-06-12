@@ -13,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
   const menuItems = [
     { id: "home", label: "Home" },
     { id: "quemsomos", label: "Quem Somos" },
-    { id: "estrutura", label: "Estrutura" },
+    { id: "unidades", label: "unidades" },
     { id: "equipe", label: "Equipe" },
     { id: "programas", label: "Programas" },
     { id: "intensivo", label: "Intensivo" },
@@ -24,13 +24,13 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
   ];
 
   const highlightedItems = [
-    {
-      id: "unidades",
-      label: "Unidades",
-      badge: "São Paulo & +",
-      customClass:
-        "border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 hover:shadow-cyan-400",
-    },
+    // {
+    //   id: "unidades",
+    //   label: "Unidades",
+    //   badge: "São Paulo & +",
+    //   customClass:
+    //     "border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 hover:shadow-cyan-400",
+    // },
     {
       id: "atletas",
       label: "Atletas",

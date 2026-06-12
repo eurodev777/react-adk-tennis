@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
-import { MapPin, Phone, Mail, CheckCircle2, ChevronRight, Home } from 'lucide-react';
-import { units } from '../data';
+import React, { useState } from "react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  CheckCircle2,
+  ChevronRight,
+  Home,
+} from "lucide-react";
+import { units } from "../data";
 
 export const UnitsSection: React.FC = () => {
-  const [selectedUnit, setSelectedUnit] = useState<string>('itajaí-sede');
+  const [selectedUnit, setSelectedUnit] = useState<string>("itajaí-sede");
 
   const activeUnit = units.find((u) => u.id === selectedUnit) || units[0];
 
   return (
-    <section className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900" id="adk-units-main-container">
+    <section
+      className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900"
+      id="adk-units-main-container"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Editorial Heading */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
@@ -19,7 +29,8 @@ export const UnitsSection: React.FC = () => {
             UNIDADES <span className="text-adk-yellow">ADK TENNIS</span>
           </h2>
           <p className="text-zinc-400 font-sans text-sm">
-            Nossa metodologia de alto rendimento se expande nacionalmente. Conheça e visite nossas quadras e sedes esportivas oficiais.
+            Nossa metodologia de alto rendimento se expande nacionalmente.
+            Conheça e visite nossas quadras e sedes esportivas oficiais.
           </p>
         </div>
 
@@ -35,8 +46,8 @@ export const UnitsSection: React.FC = () => {
                   onClick={() => setSelectedUnit(unit.id)}
                   className={`w-full text-left p-5 rounded border transition-all duration-300 relative cursor-pointer block ${
                     isSelected
-                      ? 'bg-adk-card border-adk-yellow shadow-xl'
-                      : 'bg-zinc-900/40 border-zinc-902 hover:border-zinc-700 hover:bg-zinc-900'
+                      ? "bg-adk-card border-adk-yellow shadow-xl"
+                      : "bg-zinc-900/40 border-zinc-902 hover:border-zinc-700 hover:bg-zinc-900"
                   }`}
                   id={`unit-select-${unit.id}`}
                 >
@@ -62,7 +73,10 @@ export const UnitsSection: React.FC = () => {
           </div>
 
           {/* Expanded details card on right */}
-          <div className="lg:col-span-8 bg-adk-card rounded-xl border border-zinc-850 overflow-hidden" id="unit-details-expanded">
+          <div
+            className="lg:col-span-8 bg-adk-card rounded-xl border border-zinc-850 overflow-hidden"
+            id="unit-details-expanded"
+          >
             <div className="relative h-72 w-full">
               <img
                 src={activeUnit.image}
@@ -83,7 +97,9 @@ export const UnitsSection: React.FC = () => {
             <div className="p-6 md:p-8 space-y-8">
               {/* Description */}
               <div className="space-y-2 text-left">
-                <h4 className="text-xs uppercase tracking-widest text-zinc-400 font-bold">História &amp; Vocação</h4>
+                <h4 className="text-xs uppercase tracking-widest text-zinc-400 font-bold">
+                  História &amp; Vocação
+                </h4>
                 <p className="text-sm text-zinc-300 font-sans leading-relaxed">
                   {activeUnit.description}
                 </p>
@@ -96,8 +112,12 @@ export const UnitsSection: React.FC = () => {
                     Quadras Disponíveis
                   </h4>
                   <div className="p-4 bg-zinc-950 rounded border border-zinc-900">
-                    <span className="text-xs font-extrabold text-adk-yellow block uppercase">Quadras Oficiais</span>
-                    <p className="text-sm text-zinc-200 mt-1 font-semibold">{activeUnit.courts}</p>
+                    <span className="text-xs font-extrabold text-adk-yellow block uppercase">
+                      Quadras Oficiais
+                    </span>
+                    <p className="text-sm text-zinc-200 mt-1 font-semibold">
+                      {activeUnit.courts}
+                    </p>
                   </div>
                 </div>
 
@@ -109,7 +129,9 @@ export const UnitsSection: React.FC = () => {
                     {activeUnit.amenities.map((item, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
                         <CheckCircle2 className="w-4 h-4 text-adk-yellow shrink-0 mt-0.5" />
-                        <span className="text-xs text-zinc-300 leading-tight block">{item}</span>
+                        <span className="text-xs text-zinc-300 leading-tight block">
+                          {item}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -121,7 +143,9 @@ export const UnitsSection: React.FC = () => {
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2 text-zinc-400">
                     <MapPin className="w-4 h-4 text-adk-yellow" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Endereço</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">
+                      Endereço
+                    </span>
                   </div>
                   <p className="text-xs text-zinc-300 pl-6 leading-normal font-sans">
                     {activeUnit.address}
@@ -131,7 +155,9 @@ export const UnitsSection: React.FC = () => {
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2 text-zinc-400">
                     <Phone className="w-4 h-4 text-adk-yellow" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Contato Telefônico</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">
+                      Contato Telefônico
+                    </span>
                   </div>
                   <p className="text-xs text-zinc-300 pl-6 font-mono">
                     {activeUnit.phone}
@@ -141,7 +167,9 @@ export const UnitsSection: React.FC = () => {
                 <div className="space-y-1">
                   <div className="flex items-center space-x-2 text-zinc-400">
                     <Mail className="w-4 h-4 text-adk-yellow" />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">E-mail Oficial</span>
+                    <span className="text-[10px] font-bold uppercase tracking-widest">
+                      E-mail Oficial
+                    </span>
                   </div>
                   <p className="text-xs text-zinc-300 pl-6 font-mono truncate">
                     {activeUnit.email}
