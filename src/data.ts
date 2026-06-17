@@ -16,7 +16,7 @@ import pompeia from './assets/pompeia.jpeg'
 import sorocaba from './assets/sorocaba.jpeg'
 import saojose from './assets/sao-jose.jpeg'
 import saopaulo from './assets/banner1.jpeg'
-import patricio from './assets/banner1.jpeg'
+import patricio from './assets/patricio-arnold.jpeg'
 import thomas from './assets/banner-thomas.jpeg'
 
 export const banners: Banner[] = [
