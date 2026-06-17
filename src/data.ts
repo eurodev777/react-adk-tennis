@@ -333,6 +333,25 @@ export const units: Unit[] = [
       itajai,
   },
   {
+    id: "brasilia",
+    name: "Brasília",
+    city: "Brasília",
+    description:
+      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
+    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
+    amenities: [
+      "Aulas individuais sofisticadas de formação tática",
+      "Análise por vídeo e feedback de quadra integrada",
+      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
+      "Preparação esportiva juvenil para admissão em universidades americanas",
+    ],
+    address: "Bairro Pompeia - São Paulo - SP",
+    phone: "(11) 98765-4321 / (11) 3662-7000",
+    email: "pompeia@adktennis.com.br",
+    image:
+      brasilia,
+  },
+  {
     id: "sorocaba-play",
     name: "Sorocaba",
     city: "Sorocaba - SP",
@@ -350,25 +369,6 @@ export const units: Unit[] = [
     email: "sorocaba@adktennis.com.br",
     image:
       sorocaba,
-  },
-  {
-    id: "sp-sp",
-    name: "São Paulo",
-    city: "São Paulo - SP",
-    description:
-      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
-    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
-    amenities: [
-      "Aulas individuais sofisticadas de formação tática",
-      "Análise por vídeo e feedback de quadra integrada",
-      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
-      "Preparação esportiva juvenil para admissão em universidades americanas",
-    ],
-    address: "Bairro Pompeia - São Paulo - SP",
-    phone: "(11) 98765-4321 / (11) 3662-7000",
-    email: "pompeia@adktennis.com.br",
-    image:
-      saopaulo,
   },
   {
     id: "sp-pompeia",
@@ -390,9 +390,9 @@ export const units: Unit[] = [
       pompeia,
   },
   {
-    id: "brasilia",
-    name: "Brasília",
-    city: "Brasília",
+    id: "sp-sp",
+    name: "São Paulo",
+    city: "São Paulo - SP",
     description:
       "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
     courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
@@ -406,7 +406,7 @@ export const units: Unit[] = [
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
     image:
-      brasilia,
+      saopaulo,
   },
 ];
 
