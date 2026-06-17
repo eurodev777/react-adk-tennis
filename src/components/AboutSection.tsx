@@ -200,7 +200,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               </div>
 
               {/* Photo gallery slider/grid */}
-              <div className="flex flex-col gap-4 justify-center items-center">
+              <div className="flex gap-4 justify-center items-center">
                 {structureGallery.map((item, index) => (
                   <div
                     key={index}

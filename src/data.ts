@@ -16,6 +16,8 @@ import pompeia from './assets/pompeia.jpeg'
 import sorocaba from './assets/sorocaba.jpeg'
 import saojose from './assets/sao-jose.jpeg'
 import saopaulo from './assets/banner1.jpeg'
+import patricio from './assets/banner1.jpeg'
+import thomas from './assets/banner-thomas.jpeg'
 
 export const banners: Banner[] = [
   {
@@ -418,7 +420,7 @@ export const team: TeamMember[] = [
     credentials: "Ex-tenista profissional, formador de campeões sul-americanos",
     bio: "Responsável pelo alinhamento geral da metodologia de alto rendimento. Com vasta experiência nos circuitos mundiais juvenis e de transição profissional, lidera a expansão técnica pelo Brasil.",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300",
+      patricio,
   },
   {
     id: "thomas-arnold",
@@ -427,7 +429,7 @@ export const team: TeamMember[] = [
     credentials: "Certificação ITF Nível 3 (Nível Máximo)",
     bio: "Treinador altamente credenciado pela Federação Internacional de Tênis. Especialista em planejamento tático e biomecânica refinada para atletas infantojuvenis de elite.",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300",
+      thomas,
   },
   {
     id: "fisioteam",
