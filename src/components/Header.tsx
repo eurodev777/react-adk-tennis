@@ -17,7 +17,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
     { id: "equipe", label: "Equipe" },
     { id: "programas", label: "Programas" },
     { id: "intensivo", label: "Intensivo" },
-    { id: "regiao", label: "A Região" },
     { id: "noticias", label: "Notícias" },
     { id: "projeto", label: "Projeto Social" },
     { id: "contato", label: "Contato & Localização" },
@@ -214,7 +213,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
 
           <div className="pt-2 border-t border-zinc-850 flex items-center justify-between text-zinc-500 text-[11px] font-mono">
             <span>Siga-nos @adktennis</span>
-            <span>Itajaí / Balneário / SP</span>
           </div>
         </div>
       )}

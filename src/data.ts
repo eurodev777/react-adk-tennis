@@ -373,7 +373,7 @@ export const units: Unit[] = [
   {
     id: "sp-pompeia",
     name: "São José do Rio Preto",
-    city: "São Paulo - SP",
+    city: "São José do Rio Preto - SP",
     description:
       "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
     courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
@@ -388,6 +388,25 @@ export const units: Unit[] = [
     email: "pompeia@adktennis.com.br",
     image:
       pompeia,
+  },
+  {
+    id: "brasilia",
+    name: "Brasília",
+    city: "Brasília",
+    description:
+      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
+    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
+    amenities: [
+      "Aulas individuais sofisticadas de formação tática",
+      "Análise por vídeo e feedback de quadra integrada",
+      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
+      "Preparação esportiva juvenil para admissão em universidades americanas",
+    ],
+    address: "Bairro Pompeia - São Paulo - SP",
+    phone: "(11) 98765-4321 / (11) 3662-7000",
+    email: "pompeia@adktennis.com.br",
+    image:
+      brasilia,
   },
 ];
 

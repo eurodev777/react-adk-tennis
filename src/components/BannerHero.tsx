@@ -14,7 +14,7 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 7500);
+    }, 5000);
     return () => clearInterval(timer);
   }, [banners.length]);
 
@@ -40,7 +40,7 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
   return (
     <div className="relative h-[550px] md:h-[650px] w-full bg-zinc-950 overflow-hidden border-b border-zinc-900" id="adk-hero-slider">
       {/* Slide Image Backgrounds and Details */}
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {banners.map((slide, index) => {
           if (index !== currentSlide) return null;
           return (

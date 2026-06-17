@@ -10,7 +10,8 @@ import {
   MapPin,
   ZoomIn,
 } from "lucide-react";
-import { team, structureGallery } from "../data";
+import { team, units } from "../data";
+import sobre from '../assets/patricio-arnold.jpeg'
 
 interface AboutSectionProps {
   onNavigateTab: (tabId: string) => void;
@@ -23,6 +24,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     "quemsomos" | "projeto" | "regiao"
   >("quemsomos");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const structureGallery = units
 
   const stats = [
     {
@@ -147,7 +149,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-adk-yellow"></div>
                 <div className="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-adk-yellow"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1542144512-9b50d0ec411d?auto=format&fit=crop&q=80&w=600"
+                  src={sobre}
                   alt="Tenistas profissionais treinando na quadra de saibro da ADK"
                   className="rounded shadow-2xl w-full h-[350px] object-cover ring-1 ring-zinc-850 filter brightness-95"
                 />
@@ -189,7 +191,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             <div className="space-y-8 pt-8">
               <div className="text-center max-w-xl mx-auto space-y-2">
                 <h3 className="text-2xl font-black font-display uppercase tracking-tight text-white">
-                  INFRAESTRUTURA DE PONTA (ITAMIRIM)
+                  NOSSAS UNIDADES
                 </h3>
                 <p className="text-xs text-zinc-400">
                   A ADK Tennis utiliza a infraestrutura completa do Itamirim
@@ -202,18 +204,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 {structureGallery.map((item, index) => (
                   <div
                     key={index}
-                    onClick={() => setSelectedPhoto(item.link)}
+                    onClick={() => setSelectedPhoto(item.image)}
                     className="group relative h-40 bg-zinc-950 rounded overflow-hidden border border-zinc-850 cursor-pointer"
                   >
                     <img
-                      src={item.link}
+                      src={item.image}
                       alt={item.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 filter brightness-75 group-hover:brightness-90"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80 z-10" />
                     <div className="absolute bottom-2 left-2 right-2 text-left z-20">
                       <span className="block text-[10px] font-bold text-adk-yellow uppercase tracking-tighter truncate leading-none">
-                        {item.type}
+                        {item.city}
                       </span>
                       <span className="block text-[9px] font-sans text-white text-light truncate mt-0.5">
                         {item.name}
