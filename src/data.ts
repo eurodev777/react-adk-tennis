@@ -18,6 +18,7 @@ import saojose from './assets/sao-jose.jpeg'
 import saopaulo from './assets/banner1.jpeg'
 import patricio from './assets/patricio-arnold.jpeg'
 import thomas from './assets/banner-thomas.jpeg'
+import luiz from './assets/luiz-peniza.jpeg'
 
 export const banners: Banner[] = [
   {
@@ -425,7 +426,7 @@ export const team: TeamMember[] = [
   {
     id: "thomas-arnold",
     name: "Thomas Arnold",
-    role: "Técnico Principal (ADK PlayTennis Sorocaba)",
+    role: "COORDENADOR TÉNICO",
     credentials: "Certificação ITF Nível 3 (Nível Máximo)",
     bio: "Treinador altamente credenciado pela Federação Internacional de Tênis. Especialista em planejamento tático e biomecânica refinada para atletas infantojuvenis de elite.",
     image:
@@ -433,12 +434,12 @@ export const team: TeamMember[] = [
   },
   {
     id: "fisioteam",
-    name: "Felipe Rodrigues",
-    role: "Coordenador de Fisioterapia & Reabilitação",
+    name: "Luiz Peniza",
+    role: "COORDENADOR TÉNICO",
     credentials: "Especialista em Fisioterapia Esportiva de Elite",
     bio: "Exerce papel crucial na prevenção de lesões, recuperação ativa pós-treino e recondicionamento motor celular de nossos tenistas em transição.",
     image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300",
+      luiz,
   },
 ];
 
