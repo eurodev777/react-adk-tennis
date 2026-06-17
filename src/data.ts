@@ -7,6 +7,15 @@ import {
   Unit,
   TeamMember,
 } from "./types";
+import banner1 from './assets/banner1.jpeg'
+import banner2 from './assets/banner-itamirim.jpeg'
+import banner3 from './assets/banner-thomas.jpeg'
+import itajai from './assets/itajai.jpeg'
+import brasilia from './assets/brasilia.jpeg'
+import pompeia from './assets/pompeia.jpeg'
+import sorocaba from './assets/sorocaba.jpeg'
+import saojose from './assets/sao-jose.jpeg'
+import saopaulo from './assets/banner1.jpeg'
 
 export const banners: Banner[] = [
   {
@@ -17,7 +26,7 @@ export const banners: Banner[] = [
       "A maior cidade do Brasil está no radar da ADK. Mais do que uma nova unidade, chega uma metodologia construída dentro do alto rendimento, conectada ao circuito competitivo e integrada a uma rede nacional em expansão. 💪 Comandada por equipe de ponta em quadra rápida.",
     badge: "EXPANSÃO SÃO PAULO",
     image:
-      "https://images.unsplash.com/photo-1622279457486-62dcc4a4bf13?auto=format&fit=crop&q=80&w=1200", // clay courts / city lights
+    banner1,
     linkText: "Conhecer Pompeia",
     date: "Julho de 2026",
     tag: "São Paulo - Pompeia",
@@ -30,7 +39,8 @@ export const banners: Banner[] = [
       "Sede principal da ADK Tennis em Itajaí, SC. Infraestrutura de ponta com 15 quadras de saibro (três delas cobertas) e duas de piso rápido rústico, academia de ginástica, fisioterapia avançada, pista de corrida e vestiários integrados.",
     badge: "SEDE ITAJAÍ",
     image:
-      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200", // clay tennis courts
+    banner2,
+     //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
     linkText: "Explorar Estrutura",
     tag: "Itajaí",
   },
@@ -42,7 +52,8 @@ export const banners: Banner[] = [
       "Técnico da unidade ADK PlayTennis Sorocaba concluiu o módulo máximo de capacitação internacional. Garantia de metodologia de alto nível sintonizada com as principais táticas modernas das escolas de elite mundiais.",
     badge: "METODOLOGIA DE ELITE",
     image:
-      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=1200", // intense training close up
+    banner3,
+      // "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=1200", // intense training close up
     linkText: "Ver Certificações",
     tag: "Treinamento",
   },
@@ -319,7 +330,7 @@ export const units: Unit[] = [
     phone: "(47) 3341-9222 / (47) 99915-31800",
     email: "contato@adktennis.com.br",
     image:
-      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=600",
+      itajai,
   },
   {
     id: "sorocaba-play",
@@ -338,10 +349,10 @@ export const units: Unit[] = [
     phone: "(15) 3030-9000",
     email: "sorocaba@adktennis.com.br",
     image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+      sorocaba,
   },
   {
-    id: "sp-pompeia",
+    id: "sp-sp",
     name: "São Paulo",
     city: "São Paulo - SP",
     description:
@@ -357,7 +368,7 @@ export const units: Unit[] = [
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
     image:
-      "https://images.unsplash.com/photo-1622279457486-62dcc4a4bf13?auto=format&fit=crop&q=80&w=600",
+      saopaulo,
   },
   {
     id: "sp-pompeia",
@@ -376,7 +387,7 @@ export const units: Unit[] = [
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
     image:
-      "https://images.unsplash.com/photo-1622279457486-62dcc4a4bf13?auto=format&fit=crop&q=80&w=600",
+      pompeia,
   },
 ];
 
