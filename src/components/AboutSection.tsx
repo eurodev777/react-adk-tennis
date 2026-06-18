@@ -11,7 +11,7 @@ import {
   ZoomIn,
 } from "lucide-react";
 import { team, units } from "../data";
-import sobre from '../assets/patricio-arnold.jpeg'
+import sobre from "../assets/patricio-arnold.jpeg";
 
 interface AboutSectionProps {
   onNavigateTab: (tabId: string) => void;
@@ -24,7 +24,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     "quemsomos" | "projeto" | "regiao"
   >("quemsomos");
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
-  const structureGallery = units
+  const structureGallery = units;
 
   const stats = [
     {
@@ -140,7 +140,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     onClick={() => onNavigateTab("contato")}
                     className="bg-adk-yellow hover:bg-white text-zinc-950 font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 rounded transition-all duration-200"
                   >
-                    Fale com Coordenação
+                    Mais informações
                   </button>
                 </div>
               </div>

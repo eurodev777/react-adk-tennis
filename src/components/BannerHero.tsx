@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ChevronLeft, ChevronRight, MapPin, Calendar, Award, ArrowUpRight } from 'lucide-react';
-import { Banner } from '../types';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  MapPin,
+  Calendar,
+  Award,
+  ArrowUpRight,
+} from "lucide-react";
+import { Banner } from "../types";
 
 interface BannerHeroProps {
   banners: Banner[];
   onNavigateTab: (tabId: string) => void;
 }
 
-export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }) => {
+export const BannerHero: React.FC<BannerHeroProps> = ({
+  banners,
+  onNavigateTab,
+}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -29,16 +39,19 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
   // Maps banner targets directly to navigation action
   const handleBannerAction = (id: number) => {
     if (id === 1) {
-      onNavigateTab('unidades');
+      onNavigateTab("unidades");
     } else if (id === 2) {
-      onNavigateTab('estrutura');
+      onNavigateTab("estrutura");
     } else if (id === 3) {
-      onNavigateTab('equipe');
+      onNavigateTab("equipe");
     }
   };
 
   return (
-    <div className="relative h-[550px] md:h-[650px] w-full bg-zinc-950 overflow-hidden border-b border-zinc-900" id="adk-hero-slider">
+    <div
+      className="relative h-[550px] md:h-[650px] w-full bg-zinc-950 overflow-hidden border-b border-zinc-900"
+      id="adk-hero-slider"
+    >
       {/* Slide Image Backgrounds and Details */}
       <AnimatePresence>
         {banners.map((slide, index) => {
@@ -87,10 +100,12 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
 
                     {/* Highly stylized tennis sports editorial headers using ADK identity colors */}
                     <h1 className="text-4xl md:text-6xl font-black font-display text-white uppercase tracking-tighter leading-none">
-                      {slide.title.split('ADK').map((part, i, arr) => (
+                      {slide.title.split("ADK").map((part, i, arr) => (
                         <React.Fragment key={i}>
                           {part}
-                          {i < arr.length - 1 && <span className="text-adk-yellow">ADK</span>}
+                          {i < arr.length - 1 && (
+                            <span className="text-adk-yellow">ADK</span>
+                          )}
                         </React.Fragment>
                       ))}
                     </h1>
@@ -115,11 +130,11 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
                       </button>
 
                       <button
-                        onClick={() => onNavigateTab('contato')}
+                        onClick={() => onNavigateTab("contato")}
                         className="text-white hover:text-adk-yellow border border-zinc-700 hover:border-adk-yellow font-black uppercase text-xs tracking-wider px-6 py-3 rounded transition-colors duration-300"
                         id={`slide-btn-sec-${slide.id}`}
                       >
-                        Fale com Diretores
+                        Mais informações
                       </button>
                     </div>
                   </div>
@@ -131,7 +146,10 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
       </AnimatePresence>
 
       {/* Slide Navigation controls */}
-      <div className="absolute right-6 bottom-8 z-30 flex items-center space-x-2" id="slider-nav-arrows">
+      <div
+        className="absolute right-6 bottom-8 z-30 flex items-center space-x-2"
+        id="slider-nav-arrows"
+      >
         <button
           onClick={handlePrev}
           className="p-3 rounded-full bg-zinc-900/80 hover:bg-adk-yellow text-white hover:text-zinc-950 border border-zinc-800 hover:border-adk-yellow transition-all duration-300 cursor-pointer"
@@ -149,13 +167,18 @@ export const BannerHero: React.FC<BannerHeroProps> = ({ banners, onNavigateTab }
       </div>
 
       {/* Staged Indicator dots */}
-      <div className="absolute left-6 bottom-8 z-30 flex items-center space-x-2" id="slider-nav-dots">
+      <div
+        className="absolute left-6 bottom-8 z-30 flex items-center space-x-2"
+        id="slider-nav-dots"
+      >
         {banners.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
-              index === currentSlide ? 'w-10 bg-adk-yellow' : 'w-2.5 bg-zinc-700 hover:bg-zinc-500'
+              index === currentSlide
+                ? "w-10 bg-adk-yellow"
+                : "w-2.5 bg-zinc-700 hover:bg-zinc-500"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
