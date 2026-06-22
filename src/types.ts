@@ -13,8 +13,8 @@ export interface Banner {
 export interface Sponsor {
   id: number;
   name: string;
-  category: 'Patrocinador' | 'Parceria' | 'Apoio';
-  customSvgType: 'taroii' | 'promenac' | 'cbt' | 'fct' | 'fmel' | 'cbc' | 'utr' | 'kirschbaum' | 'playtennis' | 'core';
+  category: "Patrocinador" | "Parceria" | "Apoio";
+  customSvgType: string;
   websiteUrl?: string;
 }
 

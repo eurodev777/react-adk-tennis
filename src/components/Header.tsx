@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
           className="flex items-center space-x-3 group text-left cursor-pointer"
           id="header-brand-logo"
         >
-          <div className="w-20 h-20 flex items-center justify-center rounded-sm font-black text-adk-dark text-xl transition-all duration-300 shadow-md group-hover:scale-105">
+          <div className="w-14 h-18 flex items-center justify-center rounded-sm font-black text-adk-dark text-xl transition-all duration-300 shadow-md group-hover:scale-105">
             <img src={logo} />
           </div>
           <div className="flex flex-col">

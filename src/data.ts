@@ -25,6 +25,13 @@ import noticia3 from "./assets/noticia-3.jpg";
 import atleta1 from "./assets/atleta-1.jpeg";
 import atleta2 from "./assets/atleta-2.jpeg";
 import atleta3 from "./assets/atleta-3.jpeg";
+import playtennis from "./assets/play-tennis.jpeg";
+import cbc from "./assets/cbc.jpeg";
+import taroii from "./assets/taroii.jpeg";
+import cbt from "./assets/cbt.jpeg";
+import kirschbaum from "./assets/kirschbaum.jpeg";
+import promenac from "./assets/promenac.jpeg";
+import utr from "./assets/utr.jpeg";
 
 export const banners: Banner[] = [
   {
@@ -70,71 +77,50 @@ export const sponsors: Sponsor[] = [
     id: 1,
     name: "Taroii",
     category: "Patrocinador",
-    customSvgType: "taroii",
+    customSvgType: taroii,
     websiteUrl: "http://www.taroii.com.br",
   },
   {
     id: 2,
     name: "Promenac Camvel",
     category: "Patrocinador",
-    customSvgType: "promenac",
+    customSvgType: promenac,
     websiteUrl: "https://www.promenac.com.br",
   },
   {
     id: 3,
     name: "CBT - Confederação Brasileira de Tênis",
     category: "Parceria",
-    customSvgType: "cbt",
+    customSvgType: cbt,
     websiteUrl: "https://www.cbtenis.com.br",
-  },
-  {
-    id: 4,
-    name: "FCT - Federação Catarinense de Tênis",
-    category: "Parceria",
-    customSvgType: "fct",
-    websiteUrl: "http://www.fct.org.br",
-  },
-  {
-    id: 5,
-    name: "FMEL - Fundação Municipal de Esporte",
-    category: "Parceria",
-    customSvgType: "fmel",
-    websiteUrl: "https://itajai.sc.gov.br",
   },
   {
     id: 6,
     name: "CBC - Comitê Brasileiro de Clubes",
     category: "Parceria",
-    customSvgType: "cbc",
+    customSvgType: cbc,
     websiteUrl: "https://www.cbclubes.org.br",
   },
   {
     id: 7,
     name: "UTR - Universal Tennis Rating",
     category: "Parceria",
-    customSvgType: "utr",
+    customSvgType: utr,
     websiteUrl: "https://www.universaltennis.com",
   },
   {
     id: 8,
     name: "Kirschbaum",
     category: "Parceria",
-    customSvgType: "kirschbaum",
+    customSvgType: kirschbaum,
     websiteUrl: "http://www.kirschbaum.com.br",
   },
   {
     id: 9,
     name: "PlayTennis",
     category: "Parceria",
-    customSvgType: "playtennis",
+    customSvgType: playtennis,
     websiteUrl: "https://www.playtennis.com.br",
-  },
-  {
-    id: 10,
-    name: "Core Ortopedia",
-    category: "Parceria",
-    customSvgType: "core",
-    websiteUrl: "#core",
   },
 ];
 
@@ -223,8 +209,7 @@ export const athletes: Athlete[] = [
       "Formado na base e treina frequentemente no saibro da ADK Itamirim",
       "Sólida carreira internacional com múltiplos títulos no circuito ATP",
     ],
-    image:
-      "https://images.unsplash.com/photo-1542144512-9b50d0ec411d?auto=format&fit=crop&q=80&w=600",
+    image: atleta1,
     bio: "Rafael Matos é um dos maiores expoentes das duplas do tênis brasileiro na última década. Desenvolveu-se no saibro sob os olhares da qualificada equipe técnica ADK Tennis de Itajaí.",
     status: "Ativo no Circuito ATP",
   },
@@ -240,26 +225,24 @@ export const athletes: Athlete[] = [
       "Reconhecido pela solidez de golpes e garra em quadras de saibro",
       "Preparação física centralizada na estrutura integrada da ADK",
     ],
-    image:
-      "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&q=80&w=600",
+    image: atleta3,
     bio: "Orlando Luz tem uma brilhante trajetória desde a base, tendo alcançado o topo do ranking juvenil mundial. Na ADK Tennis, ele consolida seu treinamento físico e estratégico para o calendário mundial do Challenger e ATP Tours.",
     status: "Ativo no Circuito Challenger/ATP",
   },
   {
-    id: "carlos-alcaraz-insp",
-    name: "Estilo & Inspiração ADK",
-    category: "Referência Técnica",
-    achievement: "5 horas e 29 minutos. 3 match points salvos",
+    id: "luiza-fullana",
+    name: "Luiza Fullana",
+    category: "Profissional",
+    achievement: "Campeã do W15 de Brasília 2026",
     highlights: [
-      "Combate de altíssima intensidade que serve de material de estudo",
-      "Resiliência mental extrema em jogos de 5 sets",
-      "Padrões de agressividade que ensinamos em nossos treinos intensivos",
-      "Combinação perfeita de Drop Shot, Heavy Topspin e movimentação",
+      "Campeã do W15 de Brasília em junho de 2026",
+      "Atleta da ADK PlayTennis Brasília",
+      "Semana de competição marcada por atuações consistentes e de alto nível",
+      "Destaque em torneios profissionais do circuito feminino",
     ],
-    image:
-      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=600",
-    bio: "A metodologia da ADK Tennis adota práticas modernas do tênis internacional espanhol. Analisamos partidas heroicas das maiores estrelas mundiais para instigar a resiliência mental e a atitude ativa nos nossos tenistas juvenis.",
-    status: "Mentalidade de Campeão",
+    image: atleta2,
+    bio: "Luiza Fullana é uma das atletas em destaque da ADK PlayTennis Brasília. Em 2026, conquistou o título do W15 de Brasília, demonstrando alto nível técnico, consistência competitiva e evolução constante no circuito profissional feminino.",
+    status: "Ativa no Circuito Profissional",
   },
 ];
 
