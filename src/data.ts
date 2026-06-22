@@ -7,18 +7,24 @@ import {
   Unit,
   TeamMember,
 } from "./types";
-import banner1 from './assets/banner1.jpeg'
-import banner2 from './assets/banner-itamirim.jpeg'
-import banner3 from './assets/banner-thomas.jpeg'
-import itajai from './assets/itajai.jpeg'
-import brasilia from './assets/brasilia.jpeg'
-import pompeia from './assets/pompeia.jpeg'
-import sorocaba from './assets/sorocaba.jpeg'
-import saojose from './assets/sao-jose.jpeg'
-import saopaulo from './assets/banner1.jpeg'
-import patricio from './assets/patricio-arnold.jpeg'
-import thomas from './assets/banner-thomas.jpeg'
-import luiz from './assets/luiz-peniza.jpeg'
+import banner1 from "./assets/banner1.jpeg";
+import banner2 from "./assets/banner-itamirim.jpeg";
+import banner3 from "./assets/banner-thomas.jpeg";
+import itajai from "./assets/itajai.jpeg";
+import brasilia from "./assets/brasilia.jpeg";
+import pompeia from "./assets/pompeia.jpeg";
+import sorocaba from "./assets/sorocaba.jpeg";
+import saojose from "./assets/sao-jose.jpeg";
+import saopaulo from "./assets/banner1.jpeg";
+import patricio from "./assets/patricio-arnold.jpeg";
+import thomas from "./assets/banner-thomas.jpeg";
+import luiz from "./assets/luiz-peniza.jpeg";
+import noticia1 from "./assets/noticia-1.jpg";
+import noticia2 from "./assets/noticia-2.jpg";
+import noticia3 from "./assets/noticia-3.jpg";
+import atleta1 from "./assets/atleta-1.jpeg";
+import atleta2 from "./assets/atleta-2.jpeg";
+import atleta3 from "./assets/atleta-3.jpeg";
 
 export const banners: Banner[] = [
   {
@@ -28,8 +34,7 @@ export const banners: Banner[] = [
     description:
       "A maior cidade do Brasil está no radar da ADK. Mais do que uma nova unidade, chega uma metodologia construída dentro do alto rendimento, conectada ao circuito competitivo e integrada a uma rede nacional em expansão. 💪 Comandada por equipe de ponta em quadra rápida.",
     badge: "EXPANSÃO SÃO PAULO",
-    image:
-    banner1,
+    image: banner1,
     linkText: "Conhecer Pompeia",
     date: "Julho de 2026",
     tag: "São Paulo - Pompeia",
@@ -41,9 +46,8 @@ export const banners: Banner[] = [
     description:
       "Sede principal da ADK Tennis em Itajaí, SC. Infraestrutura de ponta com 15 quadras de saibro (três delas cobertas) e duas de piso rápido rústico, academia de ginástica, fisioterapia avançada, pista de corrida e vestiários integrados.",
     badge: "SEDE ITAJAÍ",
-    image:
-    banner2,
-     //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
+    image: banner2,
+    //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
     linkText: "Explorar Estrutura",
     tag: "Itajaí",
   },
@@ -54,9 +58,8 @@ export const banners: Banner[] = [
     description:
       "Técnico da unidade ADK PlayTennis Sorocaba concluiu o módulo máximo de capacitação internacional. Garantia de metodologia de alto nível sintonizada com as principais táticas modernas das escolas de elite mundiais.",
     badge: "METODOLOGIA DE ELITE",
-    image:
-    banner3,
-      // "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=1200", // intense training close up
+    image: banner3,
+    // "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=1200", // intense training close up
     linkText: "Ver Certificações",
     tag: "Treinamento",
   },
@@ -262,55 +265,52 @@ export const athletes: Athlete[] = [
 
 export const news: News[] = [
   {
-    id: "news-thomas-arnold",
-    title:
-      "Thomas Arnold conclui o módulo máximo de capacitação e alcança certificação ITF Nível 3",
+    id: "treinamento-intensivo-adk-tennis-sao-jose-do-rio-preto",
+    title: "Treinamento Intensivo ADK Tennis – São José do Rio Preto",
     summary:
-      "O técnico principal da unidade ADK PlayTennis Sorocaba concluiu o módulo de extrema qualificação da Federação Internacional de Tênis, garantindo o mais alto nível de instrução.",
-    date: "Junho 2026",
-    content:
-      "O corpo docente da ADK Tennis consolida ainda mais sua excelência técnica. Thomas Arnold concluiu com êxito todas as etapas de capacitação e atingiu a certificação ITF Nível 3, o status máximo para treinadores na grade curricular internacional. A metodologia da ADK foca na formação acadêmica rigorosa de seus professores para entregar aos jovens as melhores estratégias e biomecânica.",
-    image:
-      "https://images.unsplash.com/photo-1556484645-a034161d80d6?auto=format&fit=crop&q=80&w=600",
-    tag: "Capacitação",
+      "O Treinamento Intensivo ADK reúne a mesma metodologia aplicada diariamente na formação dos atletas da academia: trabalho técnico, tático, físico e mental em um ambiente de alta exigência e evolução constante.",
+    date: "10 de junho de 2026",
+    content: `O Treinamento Intensivo ADK reúne a mesma metodologia aplicada diariamente na formação dos atletas da academia: trabalho técnico, tático, físico e mental em um ambiente de alta exigência e evolução constante.
+
+São cinco dias de treino estruturado para quem busca evoluir de verdade dentro da quadra.
+
+🏟️ Treinamentos realizados no Palestra Esporte Clube, em São José do Rio Preto.
+
+📅 Semana 1 — 29/06
+📅 Semana 2 — 06/07
+📅 Semana 3 — 13/07
+
+⚠️ Vagas limitadas.`,
+    image: noticia1,
+    tag: "",
   },
   {
-    id: "news-sp-expansion",
-    title:
-      "A ADK chega a São Paulo com a Metodologia Integrada PlayTennis Pompéia",
+    id: "campea-w15-de-brasilia-🏆",
+    title: "CAMPEÃ W15 DE BRASÍLIA 🏆",
     summary:
-      "Parceria de expansão nacional integra alta performance do tênis competitivo no coração de São Paulo, aproximando a elite escolar da rede nacional.",
-    date: "Maio 2026",
+      "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília,",
+    date: "8 de junho de 2026",
     content:
-      "Chegamos com força total à capital paulista! A nova parceria de desenvolvimento traz a respeitada infraestrutura PlayTennis aliada ao plano técnico de competição e alto rendimento da ADK. Mais do que quadras extras, a unidade proporcionará intercâmbios, acompanhamento direcionado e clínicas periódicas ministradas por coaches de Itajaí.",
-    image:
-      "https://images.unsplash.com/photo-1542144512-9b50d0ec411d?auto=format&fit=crop&q=80&w=600",
-    tag: "Expansão",
+      "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília, coroando uma grande semana de competição com atuações consistentes e de alto nível. 🎾",
+    image: noticia2,
+    tag: "",
   },
   {
-    id: "news-cbt-stage",
+    id: "a-maior-cidade-do-brasil-acaba-de-entrar-para-a-historia-da-adk-tennis",
     title:
-      "ADK Tennis brilha no Circuito Nacional CBT Infantojuvenil - Etapa G1",
+      "A maior cidade do Brasil acaba de entrar para a história da ADK Tennis",
     summary:
-      "As quadras de saibro do Itamirim Clube de Campo foram palco de duelos disputados, reunindo os melhores nomes da nova geração no tênis infanto brasileiro.",
+      "O que começou em Itajaí, ganhou força em Brasília, chegou a Sorocaba, São José do Rio Preto e agora alcança um dos mercados mais importantes do país.",
     date: "Abril 2026",
-    content:
-      "Como clube de campo oficial, o Itamirim sediou a Etapa G1 do Circuito CBT Infantojuvenil. Nossos atletas locais garantiram posições de destaque nas categorias de 12, 14 e 16 anos, consolidando a ADK Tennis como uma das academias mais medalhadas da competição do país.",
-    image:
-      "https://images.unsplash.com/photo-1471295263376-9978587c402b?auto=format&fit=crop&q=80&w=600",
+    content: `O que começou em Itajaí, ganhou força em Brasília, chegou a Sorocaba, São José do Rio Preto e agora alcança um dos mercados mais importantes do país.
+
+Não estamos anunciando apenas uma nova unidade.
+
+Estamos expandindo uma metodologia que forma atletas, desenvolve pessoas e constrói resultados dentro e fora das quadras.
+
+Em parceria com a PlayTennis, nasce a ADK PlayTennis São Paulo.`,
+    image: noticia3,
     tag: "Competição",
-  },
-  {
-    id: "news-intensivo-julho",
-    title: "Vagas abertas para o Intensivo ADK Itajaí - Julho 2026",
-    summary:
-      "Prepare-se para o melhor inverno de treinos do Brasil. Inscrições abertas para atletas de todo o país que desejam treinar de 1 a 5 semanas sob ritmo profissional.",
-    date: "Março 2026",
-    content:
-      "Trabalho técnico, tático, preparo físico focado, análises biomecânicas e acompanhamento com psicólogos esportivos. O Intensivo ADK de Julho é a melhor oportunidade para o tenista evoluir de forma ultra rápida em suas férias de inverno.",
-    image:
-      "https://images.unsplash.com/photo-1560012057-4372e14c5085?auto=format&fit=crop&q=80&w=600",
-    tag: "Intensivo",
   },
 ];
 
@@ -332,8 +332,7 @@ export const units: Unit[] = [
     address: "Rua José Gall, nº 1106 - Itamirim Clube de Campo - Itajaí - SC",
     phone: "(47) 3341-9222 / (47) 99915-31800",
     email: "contato@adktennis.com.br",
-    image:
-      itajai,
+    image: itajai,
   },
   {
     id: "brasilia",
@@ -351,8 +350,7 @@ export const units: Unit[] = [
     address: "Bairro Pompeia - São Paulo - SP",
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
-    image:
-      brasilia,
+    image: brasilia,
   },
   {
     id: "sorocaba-play",
@@ -370,8 +368,7 @@ export const units: Unit[] = [
     address: "Região Central de Sorocaba, parceiras integradas - SP",
     phone: "(15) 3030-9000",
     email: "sorocaba@adktennis.com.br",
-    image:
-      sorocaba,
+    image: sorocaba,
   },
   {
     id: "sp-pompeia",
@@ -389,8 +386,7 @@ export const units: Unit[] = [
     address: "Bairro Pompeia - São Paulo - SP",
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
-    image:
-      pompeia,
+    image: pompeia,
   },
   {
     id: "sp-sp",
@@ -408,8 +404,7 @@ export const units: Unit[] = [
     address: "Bairro Pompeia - São Paulo - SP",
     phone: "(11) 98765-4321 / (11) 3662-7000",
     email: "pompeia@adktennis.com.br",
-    image:
-      saopaulo,
+    image: saopaulo,
   },
 ];
 
@@ -420,8 +415,7 @@ export const team: TeamMember[] = [
     role: "Diretor Técnico & Fundador",
     credentials: "Ex-tenista profissional, formador de campeões sul-americanos",
     bio: "Responsável pelo alinhamento geral da metodologia de alto rendimento. Com vasta experiência nos circuitos mundiais juvenis e de transição profissional, lidera a expansão técnica pelo Brasil.",
-    image:
-      patricio,
+    image: patricio,
   },
   {
     id: "thomas-arnold",
@@ -429,8 +423,7 @@ export const team: TeamMember[] = [
     role: "COORDENADOR TÉNICO",
     credentials: "Certificação ITF Nível 3 (Nível Máximo)",
     bio: "Treinador altamente credenciado pela Federação Internacional de Tênis. Especialista em planejamento tático e biomecânica refinada para atletas infantojuvenis de elite.",
-    image:
-      thomas,
+    image: thomas,
   },
   {
     id: "fisioteam",
@@ -438,8 +431,7 @@ export const team: TeamMember[] = [
     role: "COORDENADOR TÉNICO",
     credentials: "Especialista em Fisioterapia Esportiva de Elite",
     bio: "Exerce papel crucial na prevenção de lesões, recuperação ativa pós-treino e recondicionamento motor celular de nossos tenistas em transição.",
-    image:
-      luiz,
+    image: luiz,
   },
 ];
 

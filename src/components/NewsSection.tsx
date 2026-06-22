@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
-import { Calendar, Tag, ChevronRight, BookOpen, Clock, ArrowRight } from 'lucide-react';
-import { news } from '../data';
-import { News } from '../types';
+import React, { useState } from "react";
+import {
+  Calendar,
+  Tag,
+  ChevronRight,
+  BookOpen,
+  Clock,
+  ArrowRight,
+} from "lucide-react";
+import { news } from "../data";
+import { News } from "../types";
 
 export const NewsSection: React.FC = () => {
   const [selectedArticle, setSelectedArticle] = useState<News | null>(null);
 
   return (
-    <section className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900" id="adk-news-section">
+    <section
+      className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900"
+      id="adk-news-section"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Editorial Title */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
@@ -19,7 +29,8 @@ export const NewsSection: React.FC = () => {
               ÚLTIMAS <span className="text-adk-yellow">NOTÍCIAS ADK</span>
             </h2>
             <p className="text-zinc-400 font-sans text-sm max-w-lg">
-              Acompanhe novidades de torneios, expansão nacional, convocações de Davis Cup e agenda esportiva das sedes.
+              Acompanhe novidades de torneios, expansão nacional, convocações de
+              Davis Cup e agenda esportiva das sedes.
             </p>
           </div>
           <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest hidden md:block">
@@ -75,10 +86,17 @@ export const NewsSection: React.FC = () => {
 
         {/* Beautiful modal overlay to read full news article */}
         {selectedArticle && (
-          <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in" id="news-lightbox-modal">
+          <div
+            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in"
+            id="news-lightbox-modal"
+          >
             <div className="bg-zinc-950 max-w-2xl w-full rounded-xl border border-zinc-850 overflow-hidden relative shadow-2xl flex flex-col max-h-[90vh]">
               <div className="relative h-56 md:h-64 bg-zinc-900 shrink-0">
-                <img src={selectedArticle.image} alt={selectedArticle.title} className="w-full h-full object-cover filter brightness-[0.4]" />
+                <img
+                  src={selectedArticle.image}
+                  alt={selectedArticle.title}
+                  className="w-full h-full object-cover filter brightness-[0.4]"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent" />
                 <div className="absolute top-4 left-4 flex gap-2">
                   <span className="bg-adk-yellow text-zinc-950 text-[10px] font-extrabold uppercase px-2.5 py-1 rounded tracking-wide">
@@ -97,15 +115,18 @@ export const NewsSection: React.FC = () => {
               </div>
 
               <div className="p-6 md:p-8 overflow-y-auto space-y-4 text-left">
-                <p className="text-xs font-semibold font-mono text-adk-yellow italic border-l-2 border-adk-yellow pl-3 leading-relaxed">
+                {/* <p className="text-xs font-semibold font-mono text-adk-yellow italic border-l-2 border-adk-yellow pl-3 leading-relaxed">
                   {selectedArticle.summary}
-                </p>
+                </p> */}
                 <div className="h-px bg-zinc-90 w-full"></div>
                 <p className="text-sm text-zinc-300 font-sans leading-relaxed">
                   {selectedArticle.content}
                 </p>
                 <p className="text-xs text-zinc-500 font-sans font-light pt-4 leading-normal">
-                  Metodologia ADK Tennis — Conectando tenistas de alto rendimento ao circuito profissional nacional e internacional pelo Brasil. Todas as informações contidas correspondem à temporada esportiva 2026.
+                  Metodologia ADK Tennis — Conectando tenistas de alto
+                  rendimento ao circuito profissional nacional e internacional
+                  pelo Brasil. Todas as informações contidas correspondem à
+                  temporada esportiva 2026.
                 </p>
               </div>
 

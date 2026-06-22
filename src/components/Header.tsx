@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
     { id: "programas", label: "Programas" },
     { id: "intensivo", label: "Intensivo" },
     { id: "noticias", label: "Notícias" },
-    { id: "contato", label: "Contato & Localização" },
+    { id: "contato", label: "Contato" },
   ];
 
   const highlightedItems = [
