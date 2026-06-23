@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import { team, units } from "../data";
 import sobre from "../assets/patricio-arnold.jpeg";
+import pompeia from "../assets/pompeia.jpeg";
+import itajai from "../assets/itajai.jpeg";
 
 interface AboutSectionProps {
   onNavigateTab: (tabId: string) => void;
@@ -239,7 +241,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           >
             <div className="lg:col-span-5 order-last lg:order-first">
               <img
-                src="https://images.unsplash.com/photo-1545809074-59472b3f5eca?auto=format&fit=crop&q=80&w=600"
+                src={pompeia}
                 alt="Jovens do Projeto Social da ADK integrados sorrindo em quadras rápidas"
                 className="rounded shadow-xl w-full h-[380px] object-cover ring-1 ring-zinc-850 filter brightness-95"
               />
@@ -349,7 +351,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
             <div className="lg:col-span-5 relative">
               <img
-                src="https://images.unsplash.com/photo-1471295263376-9978587c402b?auto=format&fit=crop&q=80&w=600"
+                src={itajai}
                 alt="Vista deslumbrante do litoral de Itajaí e Balneário Camboriú praias próximas ao Itamirim"
                 className="rounded shadow-xl w-full h-[360px] object-cover ring-1 ring-zinc-850 filter brightness-95"
               />

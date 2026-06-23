@@ -454,7 +454,7 @@ export default function App() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleNavigateTab("estrutura")}
+                    onClick={() => handleNavigateTab("unidades")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
                     Estrutura Itamirim
@@ -462,18 +462,10 @@ export default function App() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleNavigateTab("projeto")}
-                    className="text-zinc-400 hover:text-adk-yellow"
-                  >
-                    Projeto Social
-                  </button>
-                </li>
-                <li>
-                  <button
                     onClick={() => handleNavigateTab("noticias")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
-                    Notícias &amp; Blogs
+                    Notícias
                   </button>
                 </li>
               </ul>

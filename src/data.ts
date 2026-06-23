@@ -157,7 +157,7 @@ export const programs: Program[] = [
       "Simulações de torneio e jogos com contagem real",
     ],
     image:
-      "https://images.unsplash.com/photo-1545809074-59472b3f5eca?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: "alto-rendimento",
@@ -175,7 +175,7 @@ export const programs: Program[] = [
       "Análise tática computadorizada e scout estatístico",
     ],
     image:
-      "https://images.unsplash.com/photo-1622279457486-62dcc4a4bf13?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
   },
   {
     id: "tenis-universitario",

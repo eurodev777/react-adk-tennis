@@ -6,6 +6,8 @@ interface SponsorMarqueeProps {
 }
 
 export const SponsorMarquee: React.FC<SponsorMarqueeProps> = ({ sponsors }) => {
+  const marqueeSponsors = [...sponsors, ...sponsors, ...sponsors, ...sponsors];
+
   return (
     <div
       className="w-full bg-zinc-950 border-y border-zinc-850 py-7 overflow-hidden relative"
@@ -24,21 +26,17 @@ export const SponsorMarquee: React.FC<SponsorMarqueeProps> = ({ sponsors }) => {
         </span>
       </div>
 
-      <div className="relative w-full flex items-center overflow-x-hidden">
-        <div className="animate-marquee flex items-center space-x-16 whitespace-nowrap">
-          {sponsors?.map((sponsor, idx) => {
-            return (
-              <a key={`${sponsor.id}-${idx}`} href={sponsor.websiteUrl || "#"}>
-                <img
-                  src={sponsor.customSvgType}
-                  className={`h-auto ${
-                    sponsor.name.includes("CBC") ? "w-16" : "w-33"
-                  }`}
-                  alt={sponsor.name}
-                />
-              </a>
-            );
-          })}
+      <div className="relative w-full overflow-hidden">
+        <div className="animate-marquee flex items-center gap-8">
+          {marqueeSponsors.map((sponsor, idx) => (
+            <a key={`${sponsor.id}-${idx}`} href={sponsor.websiteUrl || "#"}>
+              <img
+                src={sponsor.customSvgType}
+                className="h-16 w-auto shrink-0"
+                alt={sponsor.name}
+              />
+            </a>
+          ))}
         </div>
       </div>
     </div>

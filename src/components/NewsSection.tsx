@@ -46,7 +46,7 @@ export const NewsSection: React.FC = () => {
               className="bg-adk-card rounded-lg border border-zinc-850 hover:border-adk-yellow/50 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
               id={`news-card-${item.id}`}
             >
-              <div className="relative h-44 bg-zinc-900">
+              <div className="relative h-88 bg-zinc-900">
                 <img
                   src={item.image}
                   alt={item.title}

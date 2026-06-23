@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-adk-yellow: #DEE832;
-  --color-adk-dark: #0A0A0A;
-  --color-adk-card: #0F0F0F;
+  --color-adk-yellow: #dee832;
+  --color-adk-dark: #0a0a0a;
+  --color-adk-card: #0f0f0f;
   --color-adk-border: rgba(255, 255, 255, 0.1);
   --font-display: "Space Grotesk", sans-serif;
   --font-sans: "Inter", sans-serif;
@@ -18,28 +18,26 @@
   }
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
 /* Custom continuous scroll animation for sponsor marquee */
-@keyframes scroller {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: scroller 25s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .animate-marquee:hover {
   animation-play-state: paused;
 }
-
