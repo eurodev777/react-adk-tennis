@@ -31,7 +31,9 @@ export const SponsorMarquee: React.FC<SponsorMarqueeProps> = ({ sponsors }) => {
               <a key={`${sponsor.id}-${idx}`} href={sponsor.websiteUrl || "#"}>
                 <img
                   src={sponsor.customSvgType}
-                  className="h-auto w-33"
+                  className={`h-auto ${
+                    sponsor.name.includes("CBC") ? "w-16" : "w-33"
+                  }`}
                   alt={sponsor.name}
                 />
               </a>

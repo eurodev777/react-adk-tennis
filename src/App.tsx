@@ -16,6 +16,7 @@ import {
   Award,
   BookOpen,
   Sparkles,
+  Twitter,
 } from "lucide-react";
 
 import { Header } from "./components/Header";
@@ -406,19 +407,22 @@ export default function App() {
 
               <div className="flex space-x-3 pt-2" id="footer-social-circles">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/adktennis/"
+                  target="_blank"
                   className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/adktennis"
+                  target="_blank"
                   className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
                 >
-                  <Youtube className="w-4 h-4" />
+                  <Twitter className="w-4 h-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/adktennis/"
+                  target="_blank"
                   className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
                 >
                   <Facebook className="w-4 h-4" />
@@ -505,14 +509,6 @@ export default function App() {
                     Atletas e Títulos
                     <Trophy className="w-3.5 h-3.5" />
                   </button>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-zinc-400 hover:text-adk-yellow block"
-                  >
-                    Parceira de Cordas Kirschbaum
-                  </a>
                 </li>
                 <li>
                   <button
