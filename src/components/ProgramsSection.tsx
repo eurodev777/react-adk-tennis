@@ -1,29 +1,56 @@
-import React, { useState } from 'react';
-import { CheckCircle2, Trophy, Clock, Medal, Sparkles, Send, Sparkle } from 'lucide-react';
-import { programs } from '../data';
+import React, { useState } from "react";
+import {
+  CheckCircle2,
+  Trophy,
+  Clock,
+  Medal,
+  Sparkles,
+  Send,
+  Sparkle,
+} from "lucide-react";
+import { programs } from "../data";
 
 interface ProgramsSectionProps {
   onNavigateTab: (tabId: string) => void;
 }
 
-export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab }) => {
-  const [selectedProgram, setSelectedProgram] = useState<string>('alto-rendimento');
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', programId: 'alto-rendimento', message: '' });
+export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
+  onNavigateTab,
+}) => {
+  const [selectedProgram, setSelectedProgram] =
+    useState<string>("alto-rendimento");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    programId: "alto-rendimento",
+    message: "",
+  });
   const [submitted, setSubmitted] = useState(false);
 
-  const activeProgram = programs.find((p) => p.id === selectedProgram) || programs[0];
+  const activeProgram =
+    programs.find((p) => p.id === selectedProgram) || programs[0];
 
   const handleInquire = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', programId: 'alto-rendimento', message: '' });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        programId: "alto-rendimento",
+        message: "",
+      });
     }, 4500);
   };
 
   return (
-    <section className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900" id="adk-programs-main-section">
+    <section
+      className="py-16 md:py-24 bg-zinc-950 text-white border-b border-zinc-900"
+      id="adk-programs-main-section"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Header section focusing on yellow and white */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
@@ -34,14 +61,19 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
             PROGRAMAS DE <span className="text-adk-yellow">TÊNIS ADK</span>
           </h2>
           <p className="text-zinc-400 font-sans text-sm">
-            Dispomos de sistemas modulares para tenistas de todos os níveis. Selecione um programa para ver detalhes de grade horária, foco, idade e diferenciais.
+            Dispomos de sistemas modulares para tenistas de todos os níveis.
+            Selecione um programa para ver detalhes de grade horária, foco,
+            idade e diferenciais.
           </p>
         </div>
 
         {/* Layout split: Program selectors on left, details on right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Menu Selector cards */}
-          <div className="lg:col-span-5 space-y-3" id="programs-selector-column">
+          <div
+            className="lg:col-span-5 space-y-3"
+            id="programs-selector-column"
+          >
             {programs.map((prog) => {
               const isSelected = selectedProgram === prog.id;
               return (
@@ -53,8 +85,8 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
                   }}
                   className={`w-full text-left p-5 rounded border transition-all duration-300 relative cursor-pointer block ${
                     isSelected
-                      ? 'bg-adk-card border-adk-yellow shadow-lg shadow-adk-yellow/10 translate-x-2'
-                      : 'bg-zinc-900/40 border-zinc-905 hover:border-zinc-700 hover:bg-zinc-900'
+                      ? "bg-adk-card border-adk-yellow shadow-lg shadow-adk-yellow/10 translate-x-2"
+                      : "bg-zinc-900/40 border-zinc-905 hover:border-zinc-700 hover:bg-zinc-900"
                   }`}
                   id={`prog-card-${prog.id}`}
                 >
@@ -70,9 +102,11 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
                     </span>
                   </div>
 
-                  <h3 className={`text-base font-black uppercase tracking-tight mt-2 transition-colors ${
-                    isSelected ? 'text-adk-yellow' : 'text-white'
-                  }`}>
+                  <h3
+                    className={`text-base font-black uppercase tracking-tight mt-2 transition-colors ${
+                      isSelected ? "text-adk-yellow" : "text-white"
+                    }`}
+                  >
                     {prog.title}
                   </h3>
                   <p className="text-xs text-zinc-400 mt-1 line-clamp-2">
@@ -83,25 +117,37 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
             })}
 
             {/* Intensivo Julho Highlights box */}
-            <div className="p-6 rounded border border-adk-yellow bg-adk-yellow/5 space-y-4" id="programs-intensivo-highlights">
+            <div
+              className="p-6 rounded border border-adk-yellow bg-adk-yellow/5 space-y-4"
+              id="programs-intensivo-highlights"
+            >
               <div className="flex items-center gap-2 text-adk-yellow">
                 <Medal className="w-5 h-5" />
-                <span className="text-xs font-black uppercase tracking-wider">INTENSIVO ADK ITAJAÍ — JULHO 2026</span>
+                <span className="text-xs font-black uppercase tracking-wider">
+                  PROGRAMA INTENSIVO ADK TENNIS
+                </span>
               </div>
               <p className="text-xs text-zinc-300 leading-relaxed font-sans">
-                Vagas limitadas abertas de 1 a 5 semanas. Treinamento idêntico ao dos profissionais com dois turnos por dia, acompanhamento tático e biomecânica avançada.
+                O Intensivo ADK Tennis foi desenvolvido para atletas que desejam
+                potencializar sua evolução em um curto período. Durante uma
+                semana, os participantes vivenciam uma rotina estruturada de
+                treinamentos técnicos, táticos, físicos e competitivos,
+                conduzidos pela equipe da ADK Tennis.
               </p>
               <button
-                onClick={() => onNavigateTab('intensivo')}
+                onClick={() => onNavigateTab("intensivo")}
                 className="w-full text-center bg-adk-yellow text-zinc-950 text-xs font-black uppercase py-2.5 rounded tracking-wider hover:bg-white transition-colors duration-200 cursor-pointer"
               >
-                Garantir pré-reserva Julho
+                Saiba mais
               </button>
             </div>
           </div>
 
           {/* Program Details Section */}
-          <div className="lg:col-span-7 bg-adk-card rounded border border-zinc-850 overflow-hidden flex flex-col justify-between" id="programs-detail-column">
+          <div
+            className="lg:col-span-7 bg-adk-card rounded border border-zinc-850 overflow-hidden flex flex-col justify-between"
+            id="programs-detail-column"
+          >
             <div className="relative h-60 w-full">
               <img
                 src={activeProgram.image}
@@ -152,22 +198,33 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
             <div className="bg-zinc-950 p-6 border-t border-zinc-850">
               <h4 className="text-xs font-black uppercase text-white tracking-widest mb-4 flex items-center gap-1.5">
                 <Sparkle className="w-3.5 h-3.5 text-adk-yellow" />
-                Deseja se matricular ou tirar dúvidas sobre {activeProgram.title}?
+                Deseja se matricular ou tirar dúvidas sobre{" "}
+                {activeProgram.title}?
               </h4>
 
               {submitted ? (
                 <div className="bg-adk-yellow/10 border border-adk-yellow/30 p-4 rounded text-center text-adk-yellow space-y-1">
-                  <span className="font-extrabold text-xs block uppercase">SOLICITAÇÃO RECEBIDA COM SUCESSO!</span>
-                  <p className="text-[11px] text-zinc-300">Nossa secretaria entrará em contato em menos de 24 horas úteis.</p>
+                  <span className="font-extrabold text-xs block uppercase">
+                    SOLICITAÇÃO RECEBIDA COM SUCESSO!
+                  </span>
+                  <p className="text-[11px] text-zinc-300">
+                    Nossa secretaria entrará em contato em menos de 24 horas
+                    úteis.
+                  </p>
                 </div>
               ) : (
-                <form onSubmit={handleInquire} className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <form
+                  onSubmit={handleInquire}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-2"
+                >
                   <input
                     type="text"
                     required
                     placeholder="Seu Nome completo"
                     value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
                     className="bg-zinc-900 border border-zinc-800 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-adk-yellow"
                   />
                   <input
@@ -175,7 +232,9 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({ onNavigateTab 
                     required
                     placeholder="Seu melhor Email"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="bg-zinc-900 border border-zinc-800 rounded px-3 py-2 text-xs text-white focus:outline-none focus:border-adk-yellow"
                   />
                   <button

@@ -158,18 +158,18 @@ export const programs: Program[] = [
   },
   {
     id: "alto-rendimento",
-    title: "Alto Rendimento Profissional",
-    subtitle: "Treinamento integral para os circuitos COSAT, ITF e ATP/WTA",
+    title: "PROGRAMA INTENSIVO ADK TENNIS",
+    subtitle: "Uma semana de treinamento baseada na metodologia da ADK Tennis.",
     description:
-      "A joia da coroa da ADK Tennis. Preparação completa de tenistas que almejam o profissionalismo. Nossa metodologia comprovada de alta performance, integrada ao circuito competitivo nacional e mundial.",
+      "O Intensivo ADK Tennis foi desenvolvido para atletas que desejam potencializar sua evolução em um curto período. Durante uma semana, os participantes vivenciam uma rotina estruturada de treinamentos técnicos, táticos, físicos e competitivos, conduzidos pela equipe da ADK Tennis.",
     ageRange: "14+ anos / Adultos",
     target: "Alto Rendimento / Profissional",
     features: [
-      "Treinamento diário em 2 períodos (Técnico / Tático / Jogos)",
-      "Preparação física profissional de altíssima intensidade",
-      "Fisioterapia permanente e prevenção de lesões",
+      "Treinamento técnico diário 1 ou 2 turnos",
+      "Preparação física específica para o tênis",
+      "Situações de jogo e competição",
       "Gestão de calendário de torneios nacionais e internacionais",
-      "Análise tática computadorizada e scout estatístico",
+      "Acompanhamento da equipe técnica",
     ],
     image:
       "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",

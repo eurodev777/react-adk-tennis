@@ -17,6 +17,8 @@ import {
   BookOpen,
   Sparkles,
   Twitter,
+  ChartAreaIcon,
+  MessageCircle,
 } from "lucide-react";
 
 import { Header } from "./components/Header";
@@ -228,52 +230,6 @@ export default function App() {
                 </div>
               </div>
             </section>
-
-            {/* Quick stats panel as a stunning High Intensity Yellow Stripe */}
-            <div
-              className="bg-adk-yellow text-zinc-950 py-8 border-b border-zinc-900"
-              id="rapid-stats-stripe"
-            >
-              <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-black font-display italic">
-                    15
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tighter text-zinc-950">
-                    Quadras de Saibro
-                  </span>
-                </div>
-                <div className="hidden md:block h-8 w-px bg-zinc-950/20"></div>
-
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-black font-display italic">
-                    03
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tighter text-zinc-950">
-                    Quadras Cobertas
-                  </span>
-                </div>
-                <div className="hidden md:block h-8 w-px bg-zinc-950/20"></div>
-
-                <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-black font-display italic">
-                    100+
-                  </span>
-                  <span className="text-xs font-bold uppercase tracking-tighter text-zinc-950">
-                    Tenistas nos EUA
-                  </span>
-                </div>
-                <div className="hidden md:block h-8 w-px bg-zinc-950/20"></div>
-
-                <div className="text-center md:text-right">
-                  <span className="text-xs font-black uppercase italic tracking-tight text-zinc-950 block">
-                    Iniciação, Competição
-                    <br />
-                    &amp; Alto Rendimento Olímpico
-                  </span>
-                </div>
-              </div>
-            </div>
           </div>
         );
       case "quemsomos":
@@ -338,16 +294,12 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-left">
           <div className="space-y-1.5">
-            <span className="text-[10px] font-mono uppercase bg-adk-yellow text-zinc-950 px-2.5 py-0.5 rounded-full font-black tracking-widest inline-block leading-none">
-              MENSALIDADE COMPETITIVA
-            </span>
             <h3 className="text-xl font-black uppercase text-white tracking-tight">
-              Acompanhe o Informativo ADK Tennis
+            Receba novidades da ADK Tennis
             </h3>
             <p className="text-xs text-zinc-400 font-sans max-w-md leading-relaxed">
-              Assine nosso correio eletrônico exclusivo. Receba em primeira mão
-              convites para clínicas, tabelas de preço do intensivo e
-              atualizações do circuito.
+            Cadastre-se para acompanhar novidades, intensivos, eventos, novas unidades e conteúdos exclusivos da ADK Tennis.
+
             </p>
           </div>
 
@@ -373,7 +325,7 @@ export default function App() {
                   type="submit"
                   className="bg-adk-yellow hover:bg-white text-zinc-950 text-xs font-black uppercase py-3 px-6 rounded tracking-wider transition-colors cursor-pointer"
                 >
-                  Inscrever
+                  Cadastrar
                 </button>
               </form>
             )}
@@ -409,18 +361,11 @@ export default function App() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://x.com/adktennis"
+                  href="https://api.whatsapp.com/send?phone=554733419222&text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                   target="_blank"
                   className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
                 >
-                  <Twitter className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.facebook.com/adktennis/"
-                  target="_blank"
-                  className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
-                >
-                  <Facebook className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" />
                 </a>
               </div>
             </div>
@@ -441,10 +386,18 @@ export default function App() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleNavigateTab("programas")}
+                    onClick={() => handleNavigateTab("home")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
-                    Nossos Programas
+                    Metodologia
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigateTab("equipe")}
+                    className="text-zinc-400 hover:text-adk-yellow"
+                  >
+                    Equipe
                   </button>
                 </li>
                 <li>
@@ -452,7 +405,23 @@ export default function App() {
                     onClick={() => handleNavigateTab("unidades")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
-                    Estrutura Itamirim
+                    Unidades
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigateTab("programas")}
+                    className="text-zinc-400 hover:text-adk-yellow"
+                  >
+                    Programas
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigateTab("intensivo")}
+                    className="text-zinc-400 hover:text-adk-yellow"
+                  >
+                    Intensivo
                   </button>
                 </li>
                 <li>
@@ -461,6 +430,14 @@ export default function App() {
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
                     Notícias
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigateTab("contato")}
+                    className="text-zinc-400 hover:text-adk-yellow"
+                  >
+                    Contato
                   </button>
                 </li>
               </ul>
