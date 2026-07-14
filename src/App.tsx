@@ -90,9 +90,7 @@ export default function App() {
                     <span className="text-adk-yellow">ADK TENNIS</span>?
                   </h2>
                   <p className="text-zinc-400 font-sans text-xs">
-                    Reunimos estrutura física de excelência, comissão técnica
-                    com certificações internacionais máximas e track record
-                    comprovado de Grand Slams e bolsas escolares nos EUA.
+                  Uma referência nacional na formação de atletas de tênis.
                   </p>
                 </div>
 
@@ -535,7 +533,7 @@ export default function App() {
 
           <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono">
             <span>
-              © 2013 - 2026 - ADK Tennis - Academia de Tenis - Escola de Tenis -
+              © 2013 - 2026 - ADK Tennis - Academia de Alto Rendimento - Escola de Tenis -
               Centro de Treinamento de Tenis - Itajaí | Balneário Camboriú -
               Santa Catarina.
             </span>

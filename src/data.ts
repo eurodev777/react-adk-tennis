@@ -7,9 +7,9 @@ import {
   Unit,
   TeamMember,
 } from "./types";
-import banner1 from "./assets/banner1.jpeg";
-import banner2 from "./assets/banner-itamirim.jpeg";
-import banner3 from "./assets/banner-thomas.jpeg";
+import banner1 from "./assets/slider1.jpg";
+import banner2 from "./assets/slider2.jpg";
+import banner3 from "./assets/slider3.jpg";
 import itajai from "./assets/itajai.jpeg";
 import brasilia from "./assets/brasilia.jpeg";
 import pompeia from "./assets/pompeia.jpeg";
@@ -36,38 +36,35 @@ import utr from "./assets/utr.jpeg";
 export const banners: Banner[] = [
   {
     id: 1,
-    title: "A ADK CHEGA A SÃO PAULO",
-    subtitle: "Conheça a nova casa da ADK PlayTennis São Paulo - Pompeia",
+    title: "ADK TENNIS",
+    subtitle: "Academia de Alto Rendimento",
     description:
-      "A maior cidade do Brasil está no radar da ADK. Mais do que uma nova unidade, chega uma metodologia construída dentro do alto rendimento, conectada ao circuito competitivo e integrada a uma rede nacional em expansão. 💪 Comandada por equipe de ponta em quadra rápida.",
-    badge: "EXPANSÃO SÃO PAULO",
+      "Há mais de 20 anos, a ADK Tennis desenvolve atletas através de uma metodologia construída dentro do tênis de alto rendimento. Com uma equipe altamente qualificada e uma estrutura completa, oferece um ambiente preparado para a evolução técnica, física, tática e mental de atletas em formação e competição.",
+    badge: "SEDE ITAJAÍ",
     image: banner1,
-    linkText: "Conhecer Pompeia",
-    date: "Julho de 2026",
-    tag: "São Paulo - Pompeia",
+    //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
+    linkText: "Conheça a ADK Tennis",
   },
   {
     id: 2,
-    title: "MOLDANDO O FUTURO DAS QUADRAS",
-    subtitle: "Estrutura Olímpica e de circuito no Itamirim Clube de Campo",
+    title: "ADK PlayTennis São Paulo",
+    subtitle: "A metodologia da ADK Tennis agora também na capital paulista.",
     description:
-      "Sede principal da ADK Tennis em Itajaí, SC. Infraestrutura de ponta com 15 quadras de saibro (três delas cobertas) e duas de piso rápido rústico, academia de ginástica, fisioterapia avançada, pista de corrida e vestiários integrados.",
-    badge: "SEDE ITAJAÍ",
+      "A ADK PlayTennis São Paulo leva para a capital paulista a metodologia desenvolvida pela ADK Tennis ao longo de mais de 20 anos no alto rendimento. A unidade oferece programas estruturados para a formação e desenvolvimento de atletas, seguindo o mesmo padrão técnico aplicado em toda a academia.",
+    badge: "EXPANSÃO SÃO PAULO",
     image: banner2,
-    //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
-    linkText: "Explorar Estrutura",
-    tag: "Itajaí",
+    linkText: "Conheça a unidade",
   },
   {
     id: 3,
-    title: "Thomas Arnold alcança o nível máximo da ITF",
-    subtitle: "Treinador oficial Certificado ITF Nível 3",
+    title: "Intensivo ADK",
+    subtitle: "Uma imersão na metodologia da ADK Tennis.",
     description:
-      "Técnico da unidade ADK PlayTennis Sorocaba concluiu o módulo máximo de capacitação internacional. Garantia de metodologia de alto nível sintonizada com as principais táticas modernas das escolas de elite mundiais.",
-    badge: "METODOLOGIA DE ELITE",
+      "O Intensivo ADK Tennis proporciona uma semana de treinamento baseada na metodologia aplicada diariamente pela academia. Uma experiência voltada ao desenvolvimento técnico, físico, tático e mental, conduzida por uma equipe especializada na formação de atletas.",
+    badge: "INTENSIVO",
     image: banner3,
     // "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=1200", // intense training close up
-    linkText: "Ver Certificações",
+    linkText: "Saiba mais",
     tag: "Treinamento",
   },
 ];
@@ -257,24 +254,24 @@ export const news: News[] = [
 
 São cinco dias de treino estruturado para quem busca evoluir de verdade dentro da quadra.
 
-🏟️ Treinamentos realizados no Palestra Esporte Clube, em São José do Rio Preto.
+Treinamentos realizados no Palestra Esporte Clube, em São José do Rio Preto.
 
-📅 Semana 1 — 29/06
-📅 Semana 2 — 06/07
-📅 Semana 3 — 13/07
+Semana 1 — 29/06
+Semana 2 — 06/07
+Semana 3 — 13/07
 
-⚠️ Vagas limitadas.`,
+Vagas limitadas.`,
     image: noticia1,
     tag: "",
   },
   {
-    id: "campea-w15-de-brasilia-🏆",
-    title: "CAMPEÃ W15 DE BRASÍLIA 🏆",
+    id: "campea-w15-de-brasilia",
+    title: "CAMPEÃ W15 DE BRASÍLIA",
     summary:
       "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília,",
     date: "8 de junho de 2026",
     content:
-      "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília, coroando uma grande semana de competição com atuações consistentes e de alto nível. 🎾",
+      "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília, coroando uma grande semana de competição com atuações consistentes e de alto nível.",
     image: noticia2,
     tag: "",
   },
@@ -300,7 +297,7 @@ Em parceria com a PlayTennis, nasce a ADK PlayTennis São Paulo.`,
 export const units: Unit[] = [
   {
     id: "itajaí-sede",
-    name: "Itajaí",
+    name: "Sede da ADK Tennis",
     city: "Itajaí - SC",
     description:
       "Nossa sede principal é um dos complexos de tênis mais respeitáveis e modernos da América do Sul. Estrutura impecável integrada à natureza.",
@@ -319,7 +316,7 @@ export const units: Unit[] = [
   },
   {
     id: "brasilia",
-    name: "Brasília",
+    name: "ADK PlayTennis Brasília",
     city: "Brasília",
     description:
       "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
@@ -337,7 +334,7 @@ export const units: Unit[] = [
   },
   {
     id: "sorocaba-play",
-    name: "Sorocaba",
+    name: "ADK PlayTennis Sorocaba",
     city: "Sorocaba - SP",
     description:
       "Centro com foco em base competitiva e treinamento de alta performance. Comandada pelo treinador Thomas Arnold, certificado ITF Grau Máximo.",
@@ -355,7 +352,7 @@ export const units: Unit[] = [
   },
   {
     id: "sp-pompeia",
-    name: "São José do Rio Preto",
+    name: "ADK PlayTennis São José do Rio Preto",
     city: "São José do Rio Preto - SP",
     description:
       "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
@@ -373,7 +370,7 @@ export const units: Unit[] = [
   },
   {
     id: "sp-sp",
-    name: "São Paulo",
+    name: "ADK PlayTennis São Paulo",
     city: "São Paulo - SP",
     description:
       "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",

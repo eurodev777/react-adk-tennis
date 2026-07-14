@@ -24,7 +24,7 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % banners.length);
-    }, 5000);
+    }, 9000);
     return () => clearInterval(timer);
   }, [banners.length]);
 
@@ -41,9 +41,9 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
     if (id === 1) {
       onNavigateTab("unidades");
     } else if (id === 2) {
-      onNavigateTab("estrutura");
+      onNavigateTab("unidades");
     } else if (id === 3) {
-      onNavigateTab("equipe");
+      onNavigateTab("intensivo");
     }
   };
 
@@ -130,11 +130,11 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
                       </button>
 
                       <button
-                        onClick={() => onNavigateTab("contato")}
+                        onClick={() => handleBannerAction(slide.id)}
                         className="text-white hover:text-adk-yellow border border-zinc-700 hover:border-adk-yellow font-black uppercase text-xs tracking-wider px-6 py-3 rounded transition-colors duration-300"
                         id={`slide-btn-sec-${slide.id}`}
                       >
-                        Mais informações
+                        Conheça nossas unidades
                       </button>
                     </div>
                   </div>

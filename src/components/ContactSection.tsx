@@ -39,7 +39,7 @@ export const ContactSection: React.FC = () => {
             {/* Primary Headquarters contact */}
             <div className="bg-zinc-950 p-6 rounded-lg border border-zinc-850 space-y-4">
               <span className="text-[10px] bg-adk-yellow text-zinc-950 px-2 rounded-full font-black uppercase tracking-widest leading-none self-start">
-                SEDE ITAJAÍ (SC)
+              Sede da ADK Tennis
               </span>
               <h3 className="text-lg font-black uppercase text-white mt-2 leading-none">
                 Itamirim Clube de Campo
