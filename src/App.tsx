@@ -90,7 +90,7 @@ export default function App() {
                     <span className="text-adk-yellow">ADK TENNIS</span>?
                   </h2>
                   <p className="text-zinc-400 font-sans text-xs">
-                  Uma referência nacional na formação de atletas de tênis.
+                    Uma referência nacional na formação de atletas de tênis.
                   </p>
                 </div>
 
@@ -107,7 +107,9 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 rounded-lg overflow-hidden bg-zinc-950">
                   {/* Layout 1: Itajaí Base */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end border-b md:border-b-0 md:border-r border-white/10 transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
+                    <div
+                      className={`absolute inset-0 z-0 bg-[url('/card1.jpg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500`}
+                    ></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
@@ -115,18 +117,18 @@ export default function App() {
                         01
                       </div>
                       <div className="mt-12">
-                        <span className="text-adk-yellow text-xs font-black uppercase tracking-widest block mb-2">
-                          SEDE PRINCIPAL
-                        </span>
+                        {/* <span className="text-adk-yellow text-xs font-black uppercase tracking-widest block mb-2">
+                          METODOLOGIA ADK TENNIS
+                        </span> */}
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          Itajaí
+                          METODOLOGIA
                           <br />
-                          <span className="text-adk-yellow">Brasil</span>
+                          <span className="text-adk-yellow">ADK TENNIS</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
-                          15 quadras de saibro, estrutura olímpica de
-                          fisioterapia integrada e comissão de alto rendimento
-                          de nível mundial.
+                          Uma metodologia construída ao longo de mais de 20 anos
+                          dentro do tênis competitivo, aplicada diariamente na
+                          formação e desenvolvimento de atletas.
                         </p>
                       </div>
                       <button
@@ -140,7 +142,7 @@ export default function App() {
 
                   {/* Layout 2: New Unit Sorocaba */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end border-b md:border-b-0 md:border-r border-white/10 transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1622279457486-62dcc4a4bf13?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
+                    <div className="absolute inset-0 z-0 bg-[url('/card2.jpg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
@@ -148,18 +150,15 @@ export default function App() {
                         02
                       </div>
                       <div className="mt-12">
-                        <span className="text-adk-yellow text-xs font-black uppercase tracking-widest block mb-2">
-                          EXPANSÃO
-                        </span>
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          Sorocaba
+                          EQUIPE
                           <br />
-                          <span className="text-adk-yellow">PlayTennis</span>
+                          <span className="text-adk-yellow">ESPECIALIZADA</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
-                          Certificação ITF Nível 3, quadras rápidas cobertas e
-                          metodologia exclusiva para o circuito competitivo
-                          nacional.
+                          Treinadores com experiência no alto rendimento e
+                          formação reconhecida, preparados para desenvolver
+                          atletas em todas as etapas da evolução esportiva.
                         </p>
                       </div>
                       <button
@@ -173,7 +172,7 @@ export default function App() {
 
                   {/* Layout 3: Rede Nacional */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div className="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1542144512-9b50d0ec411d?auto=format&fit=crop&q=80&w=600')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
+                    <div className="absolute inset-0 z-0 bg-[url('/card3.jpeg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
@@ -181,17 +180,15 @@ export default function App() {
                         03
                       </div>
                       <div className="mt-12">
-                        <span className="text-adk-yellow text-xs font-black uppercase tracking-widest block mb-2">
-                          CAMPEÕES
-                        </span>
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          Rede
+                          ESTRUTURA PREPARADA
                           <br />
-                          <span className="text-adk-yellow">Nacional</span>
+                          <span className="text-adk-yellow">PARA EVOLUIR</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
-                          Treine com atletas de Grand Slam (Rafael Matos), ex-N1
-                          juvenil (Orlando Luz) e bolsas escolares americanas.
+                          Ambientes planejados para oferecer treinamento
+                          técnico, físico e competitivo, proporcionando as
+                          melhores condições para o desenvolvimento dos atletas.
                         </p>
                       </div>
                       <button
@@ -533,9 +530,9 @@ export default function App() {
 
           <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono">
             <span>
-              © 2013 - 2026 - ADK Tennis - Academia de Alto Rendimento - Escola de Tenis -
-              Centro de Treinamento de Tenis - Itajaí | Balneário Camboriú -
-              Santa Catarina.
+              © 2013 - 2026 - ADK Tennis - Academia de Alto Rendimento - Escola
+              de Tenis - Centro de Treinamento de Tenis - Itajaí | Balneário
+              Camboriú - Santa Catarina.
             </span>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">
