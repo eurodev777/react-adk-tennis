@@ -190,7 +190,7 @@ export default function App() {
 
                   {/* Layout 2: New Unit Sorocaba */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end border-b md:border-b-0 md:border-r border-white/10 transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div className="absolute inset-0 z-0 bg-[url('/card2.jpg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
+                    <div className="absolute inset-0 z-0 bg-[url('/card2.png')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
@@ -538,7 +538,7 @@ export default function App() {
                   Itajaí - SC | CEP 88303-101
                 </p>
                 <p className="font-mono text-zinc-350">
-                  (47) 3341-9222 / 9 9915-31800
+                  (47) 99153-1800 / 9 9915-31800
                 </p>
               </address>
             </div>

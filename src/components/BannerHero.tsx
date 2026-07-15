@@ -81,9 +81,9 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
                   <div className="max-w-3xl space-y-4">
                     {/* Badge */}
                     <div className="flex items-center space-x-2">
-                      {/* <span className="bg-adk-yellow text-zinc-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded">
+                      <span className="bg-adk-yellow text-zinc-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded">
                         {slide.badge}
-                      </span> */}
+                      </span>
                       {slide.date && (
                         <span className="flex items-center text-xs text-zinc-300 font-mono gap-1">
                           <Calendar className="w-3.5 h-3.5 text-adk-yellow" />
