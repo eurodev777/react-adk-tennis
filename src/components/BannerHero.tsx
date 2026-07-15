@@ -13,11 +13,13 @@ import { Banner } from "../types";
 interface BannerHeroProps {
   banners: Banner[];
   onNavigateTab: (tabId: string) => void;
+  onOpenUnit: (unitId: string) => void;
 }
 
 export const BannerHero: React.FC<BannerHeroProps> = ({
   banners,
   onNavigateTab,
+  onOpenUnit,
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -39,9 +41,9 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
   // Maps banner targets directly to navigation action
   const handleBannerAction = (id: number) => {
     if (id === 1) {
-      onNavigateTab("unidades");
+      onNavigateTab("quemsomos");
     } else if (id === 2) {
-      onNavigateTab("unidades");
+      onOpenUnit("sp-sp");
     } else if (id === 3) {
       onNavigateTab("intensivo");
     }
@@ -67,12 +69,10 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
               id={`slide-panel-${slide.id}`}
             >
               {/* Image overlaid with high quality darkened sports gradients */}
-              <div className="absolute inset-0 bg-gradient-to-t from-adk-dark via-adk-dark/62 to-transparent z-10" />
-              <div className="absolute inset-0 bg-gradient-to-r from-adk-dark via-transparent to-transparent z-10 hidden md:block" />
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="w-full h-full object-cover object-center transform scale-102 filter brightness-[0.45]"
+                className="w-full h-full object-cover object-center transform scale-102 filter brightness-[0.8]"
               />
 
               {/* Slide Content overlay */}
@@ -81,9 +81,9 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
                   <div className="max-w-3xl space-y-4">
                     {/* Badge */}
                     <div className="flex items-center space-x-2">
-                      <span className="bg-adk-yellow text-zinc-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded">
+                      {/* <span className="bg-adk-yellow text-zinc-950 text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded">
                         {slide.badge}
-                      </span>
+                      </span> */}
                       {slide.date && (
                         <span className="flex items-center text-xs text-zinc-300 font-mono gap-1">
                           <Calendar className="w-3.5 h-3.5 text-adk-yellow" />

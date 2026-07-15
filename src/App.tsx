@@ -40,11 +40,21 @@ import barra2 from "./assets/barra-2.jpeg";
 import barra3 from "./assets/barra-3.jpeg";
 import barra4 from "./assets/barra-4.jpeg";
 import barra5 from "./assets/barra-5.jpeg";
+import abarra1 from "./assets/5unidades.png";
+import abarra2 from "./assets/20anos.png";
+import abarra3 from "./assets/30professores.png";
+import abarra4 from "./assets/300atletas.png";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
+  const [initialUnit, setInitialUnit] = useState("itajaí-sede");
+
+  const handleOpenUnit = (unitId: string) => {
+    setInitialUnit(unitId);
+    handleNavigateTab("unidades");
+  };
 
   // Scroll to top when changing views
   useEffect(() => {
@@ -72,7 +82,7 @@ export default function App() {
         return (
           <div className="space-y-0" id="home-view">
             {/* Main Interactive Hero banner slider */}
-            <BannerHero banners={banners} onNavigateTab={handleNavigateTab} />
+            <BannerHero banners={banners} onNavigateTab={handleNavigateTab} onOpenUnit={handleOpenUnit} />
 
             {/* Continuous Sponsor marquee */}
             <SponsorMarquee sponsors={sponsors} />
@@ -97,12 +107,47 @@ export default function App() {
                 </div>
 
                 <main className="w-full h-auto">
-                  <div className="flex justify-center items-center lg:flex-row flex-col">
-                    <img src={barra1} width={200} />
-                    <img src={barra2} width={200} />
-                    <img src={barra3} width={200} />
-                    <img src={barra4} width={200} />
-                    <img src={barra5} width={200} />
+                  <div className="flex h-full justify-center items-center gap-10 lg:flex-row flex-col">
+                    <div className="flex items-center justify-center gap-3 h-full">
+                      <img src={abarra2} width={60} />
+                      <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
+                      <div className="flex flex-col">
+                        <span className="text-adk-yellow text-base uppercase font-semibold">
+                          <span className="text-3xl">20+</span> Anos
+                        </span>
+                        <span className="text-sm">de história</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 h-full">
+                      <img src={abarra1} width={60} />
+                      <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
+                      <div className="flex flex-col">
+                        <span className="text-adk-yellow text-base uppercase font-semibold">
+                        <span className="text-3xl">5</span> Unidades
+                        </span>
+                        <span className="text-sm">pelo Brasil</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 h-full">
+                      <img src={abarra4} width={60} />
+                      <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
+                      <div className="flex flex-col">
+                        <span className="text-adk-yellow text-base uppercase font-semibold">
+                        <span className="text-3xl">300+</span> Atletas
+                        </span>
+                        <span className="text-sm">desenvolvidos</span>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-3 h-full">
+                      <img src={abarra3} width={60} />
+                      <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
+                      <div className="flex flex-col">
+                        <span className="text-adk-yellow text-base uppercase font-semibold">
+                        <span className="text-3xl">30+</span> Professores
+                        </span>
+                        <span className="text-sm">especializados</span>
+                      </div>
+                    </div>
                   </div>
                 </main>
 
@@ -130,7 +175,8 @@ export default function App() {
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
                           Uma metodologia construída ao longo de mais de 20 anos
                           dentro do tênis competitivo, aplicada diariamente na
-                          formação e desenvolvimento de atletas.
+                          formação e desenvolvimento de atletas de alto
+                          rendimento.
                         </p>
                       </div>
                       <button
@@ -188,9 +234,10 @@ export default function App() {
                           <span className="text-adk-yellow">PARA EVOLUIR</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
-                          Ambientes planejados para oferecer treinamento
-                          técnico, físico e competitivo, proporcionando as
-                          melhores condições para o desenvolvimento dos atletas.
+                          Ambientes planejados para oferecer treinamento de alto
+                          rendimento técnico, físico competitivo, proporcionando
+                          as melhores condições para o desenvolvimento dos
+                          atletas.
                         </p>
                       </div>
                       <button
@@ -213,7 +260,7 @@ export default function App() {
                       Inscrições Abertas Março a Julho 2026
                     </span>
                     <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white leading-none">
-                      Vagas Disponíveis para o Intensivo no Saibro de Itajaí
+                      INSCRIÇÕES ABERTAS DE AGOSTO A DEZEMBRO.
                     </h3>
                     <p className="text-xs text-zinc-400 font-sans max-w-xl">
                       Garanta sua vaga de 1 a 5 semanas sob tutela técnica
@@ -249,7 +296,7 @@ export default function App() {
       case "noticias":
         return <NewsSection />;
       case "unidades":
-        return <UnitsSection />;
+        return <UnitsSection initialUnit={initialUnit} />;
       case "atletas":
         return <AthletesSection />;
       case "contato":
@@ -295,11 +342,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center text-left">
           <div className="space-y-1.5">
             <h3 className="text-xl font-black uppercase text-white tracking-tight">
-            Receba novidades da ADK Tennis
+              Receba novidades da ADK Tennis
             </h3>
             <p className="text-xs text-zinc-400 font-sans max-w-md leading-relaxed">
-            Cadastre-se para acompanhar novidades, intensivos, eventos, novas unidades e conteúdos exclusivos da ADK Tennis.
-
+              Cadastre-se para acompanhar novidades, intensivos, eventos, novas
+              unidades e conteúdos exclusivos da ADK Tennis.
             </p>
           </div>
 
@@ -361,7 +408,7 @@ export default function App() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=554733419222&text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+                  href="https://api.whatsapp.com/send?phone=5547991531800&text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
                   target="_blank"
                   className="p-2 rounded bg-zinc-900 text-zinc-400 hover:text-adk-yellow hover:border-adk-yellow transition-all border border-zinc-805"
                 >
@@ -382,14 +429,6 @@ export default function App() {
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
                     Quem Somos
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => handleNavigateTab("home")}
-                    className="text-zinc-400 hover:text-adk-yellow"
-                  >
-                    Metodologia
                   </button>
                 </li>
                 <li>
@@ -451,7 +490,7 @@ export default function App() {
               <ul className="space-y-2 text-xs font-sans">
                 <li>
                   <button
-                    onClick={() => handleNavigateTab("unidades")}
+                    onClick={() => handleOpenUnit("sp-sp")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
                     ADK PlayTennis São Paulo
@@ -459,7 +498,7 @@ export default function App() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleNavigateTab("unidades")}
+                    onClick={() => handleOpenUnit("sorocaba-play")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
                     ADK PlayTennis Sorocaba
@@ -479,7 +518,7 @@ export default function App() {
                     onClick={() => handleNavigateTab("intensivo")}
                     className="text-zinc-400 hover:text-adk-yellow block font-bold"
                   >
-                    Inscrição Intensivo Julho
+                    Inscrição Intensivo Itajaí
                   </button>
                 </li>
               </ul>
@@ -508,7 +547,7 @@ export default function App() {
           <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono">
             <span>
               © 2013 - 2026 - ADK Tennis - Academia de Alto Rendimento - Escola
-              de Tenis - Centro de Treinamento de Tenis - Itajaí | Balneário
+              de Tênis - Centro de Treinamento de Tênis - Itajaí | Balneário
               Camboriú - Santa Catarina.
             </span>
             <div className="flex space-x-4">

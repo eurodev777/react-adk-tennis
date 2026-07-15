@@ -97,7 +97,7 @@ export const ContactSection: React.FC = () => {
 
               <div className="z-10 flex gap-2">
                 <a
-                  href="https://maps.google.com/?q=Rua+Jose+Gall+1106+Itajai+SC"
+                  href="https://maps.app.goo.gl/DgDDD1eroQ4re6Wb7"
                   target="_blank"
                   rel="noreferrer"
                   className="bg-adk-yellow text-zinc-950 font-black text-[10px] tracking-widest uppercase px-4 py-2 rounded flex items-center gap-1 cursor-pointer"

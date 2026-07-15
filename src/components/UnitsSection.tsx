@@ -9,8 +9,12 @@ import {
 } from "lucide-react";
 import { units } from "../data";
 
-export const UnitsSection: React.FC = () => {
-  const [selectedUnit, setSelectedUnit] = useState<string>("itajaí-sede");
+interface UnitsSectionProps {
+  initialUnit?: string;
+}
+
+export const UnitsSection: React.FC = ({ initialUnit = "itajaí-sede" }) => {
+  const [selectedUnit, setSelectedUnit] = useState(initialUnit);
 
   const activeUnit = units.find((u) => u.id === selectedUnit) || units[0];
 

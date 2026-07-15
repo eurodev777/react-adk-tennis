@@ -43,7 +43,8 @@ export const NewsSection: React.FC = () => {
           {news.map((item) => (
             <div
               key={item.id}
-              className="bg-adk-card rounded-lg border border-zinc-850 hover:border-adk-yellow/50 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
+              onClick={() => setSelectedArticle(item)}
+              className="bg-adk-card cursor-pointer rounded-lg border border-zinc-850 hover:border-adk-yellow/50 transition-all duration-300 flex flex-col justify-between group overflow-hidden"
               id={`news-card-${item.id}`}
             >
               <div className="relative h-88 bg-zinc-900">
@@ -73,7 +74,6 @@ export const NewsSection: React.FC = () => {
 
                 <button
                   type="button"
-                  onClick={() => setSelectedArticle(item)}
                   className="inline-flex items-center gap-1 text-[11px] font-bold text-adk-yellow uppercase group-hover:text-white transition-colors cursor-pointer self-start"
                 >
                   <span>Saiba mais</span>
@@ -95,7 +95,7 @@ export const NewsSection: React.FC = () => {
                 <img
                   src={selectedArticle.image}
                   alt={selectedArticle.title}
-                  className="w-full h-full object-cover filter brightness-[0.4]"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent" />
                 <div className="absolute top-4 left-4 flex gap-2">

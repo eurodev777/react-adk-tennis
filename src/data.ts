@@ -7,9 +7,9 @@ import {
   Unit,
   TeamMember,
 } from "./types";
-import banner1 from "./assets/slider1.jpg";
-import banner2 from "./assets/slider2.jpg";
-import banner3 from "./assets/slider3.jpg";
+import banner1 from "./assets/slide1.png";
+import banner2 from "./assets/slide2.png";
+import banner3 from "./assets/slide3.png";
 import itajai from "./assets/itajai.jpeg";
 import brasilia from "./assets/brasilia.jpeg";
 import pompeia from "./assets/pompeia.jpeg";
@@ -310,7 +310,7 @@ export const units: Unit[] = [
       "Cafeteria, restaurante e Pro Shop de artigos esportivos",
     ],
     address: "Rua José Gall, nº 1106 - Itamirim Clube de Campo - Itajaí - SC",
-    phone: "(47) 3341-9222 / (47) 99915-31800",
+    phone: "(47) 99153-1800 / (47) 99915-31800",
     email: "contato@adktennis.com.br",
     image: itajai,
   },
