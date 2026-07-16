@@ -257,7 +257,7 @@ export default function App() {
                 >
                   <div className="space-y-2">
                     <span className="inline-block px-3 py-1 bg-adk-yellow/10 text-adk-yellow text-[10px] font-extrabold uppercase rounded tracking-widest">
-                      Inscrições Abertas Março a Julho 2026
+                      Inscrições Abertas Agosto a Dezembro 2026
                     </span>
                     <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white leading-none">
                       INSCRIÇÕES ABERTAS DE AGOSTO A DEZEMBRO.
@@ -538,7 +538,7 @@ export default function App() {
                   Itajaí - SC | CEP 88303-101
                 </p>
                 <p className="font-mono text-zinc-350">
-                  (47) 99153-1800 / 9 9915-31800
+                  (47) 99153-1800
                 </p>
               </address>
             </div>

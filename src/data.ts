@@ -40,7 +40,7 @@ export const banners: Banner[] = [
     subtitle: "Academia de Alto Rendimento",
     description:
       "Há mais de 20 anos, a ADK Tennis desenvolve atletas através de uma metodologia construída dentro do tênis de alto rendimento. Com uma equipe altamente qualificada e uma estrutura completa, oferece um ambiente preparado para a evolução técnica, física, tática e mental de atletas em formação e competição.",
-    badge: "",
+    badge: null,
     image: banner1,
     //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
     linkText: "Conheça a ADK Tennis",
@@ -310,7 +310,7 @@ export const units: Unit[] = [
       "Cafeteria, restaurante e Pro Shop de artigos esportivos",
     ],
     address: "Rua José Gall, nº 1106 - Itamirim Clube de Campo - Itajaí - SC",
-    phone: "(47) 99153-1800 / (47) 99915-31800",
+    phone: "(47) 99153-1800",
     email: "contato@adktennis.com.br",
     image: itajai,
   },
