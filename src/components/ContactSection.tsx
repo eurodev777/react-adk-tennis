@@ -59,6 +59,7 @@ export const ContactSection: React.FC = () => {
                   <div className="text-xs text-zinc-400">
                     <span className="block font-bold text-zinc-300">Ligue-nos</span>
                     (47) 3341-9222
+                    (47) 99153-1800
                   </div>
                 </div>
 

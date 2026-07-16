@@ -82,7 +82,11 @@ export default function App() {
         return (
           <div className="space-y-0" id="home-view">
             {/* Main Interactive Hero banner slider */}
-            <BannerHero banners={banners} onNavigateTab={handleNavigateTab} onOpenUnit={handleOpenUnit} />
+            <BannerHero
+              banners={banners}
+              onNavigateTab={handleNavigateTab}
+              onOpenUnit={handleOpenUnit}
+            />
 
             {/* Continuous Sponsor marquee */}
             <SponsorMarquee sponsors={sponsors} />
@@ -123,7 +127,7 @@ export default function App() {
                       <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
                       <div className="flex flex-col">
                         <span className="text-adk-yellow text-base uppercase font-semibold">
-                        <span className="text-3xl">5</span> Unidades
+                          <span className="text-3xl">5</span> Unidades
                         </span>
                         <span className="text-sm">pelo Brasil</span>
                       </div>
@@ -133,7 +137,7 @@ export default function App() {
                       <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
                       <div className="flex flex-col">
                         <span className="text-adk-yellow text-base uppercase font-semibold">
-                        <span className="text-3xl">300+</span> Atletas
+                          <span className="text-3xl">300+</span> Atletas
                         </span>
                         <span className="text-sm">desenvolvidos</span>
                       </div>
@@ -143,7 +147,7 @@ export default function App() {
                       <hr className="bg-adk-yellow h-14 w-[1px] border-none" />
                       <div className="flex flex-col">
                         <span className="text-adk-yellow text-base uppercase font-semibold">
-                        <span className="text-3xl">30+</span> Professores
+                          <span className="text-3xl">30+</span> Professores
                         </span>
                         <span className="text-sm">especializados</span>
                       </div>
@@ -537,9 +541,8 @@ export default function App() {
                   <br />
                   Itajaí - SC | CEP 88303-101
                 </p>
-                <p className="font-mono text-zinc-350">
-                  (47) 99153-1800
-                </p>
+                <p className="font-mono text-zinc-350">(47) 99153-1800</p>
+                <p className="font-mono text-zinc-350">(47) 3341-9222</p>
               </address>
             </div>
           </div>
