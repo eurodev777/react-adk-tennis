@@ -7,24 +7,34 @@ import {
   Unit,
   TeamMember,
 } from "./types";
+// BANNER
 import banner1 from "./assets/slide1.png";
 import banner2 from "./assets/slide2.png";
 import banner3 from "./assets/slide3.png";
+// UNIDADES
 import itajai from "./assets/itajai.jpeg";
 import brasilia from "./assets/brasilia.jpeg";
 import pompeia from "./assets/pompeia.jpeg";
 import sorocaba from "./assets/sorocaba.jpeg";
 import saojose from "./assets/sao-jose.jpeg";
 import saopaulo from "./assets/banner1.jpeg";
+// TIME
 import patricio from "./assets/patricio-arnold.jpeg";
 import thomas from "./assets/banner-thomas.jpeg";
 import luiz from "./assets/luiz-peniza.jpeg";
+import douglas from "./assets/luiz-peniza.jpeg";
+import bia from "./assets/luiz-peniza.jpeg";
+import eder from "./assets/luiz-peniza.jpeg";
+import mario from "./assets/luiz-peniza.jpeg";
+// NOTICIAS
 import noticia1 from "./assets/noticia-1.jpg";
 import noticia2 from "./assets/noticia-2.jpg";
 import noticia3 from "./assets/noticia-3.jpg";
+// ATLETA
 import atleta1 from "./assets/atleta-1.jpeg";
 import atleta2 from "./assets/atleta-2.jpeg";
 import atleta3 from "./assets/atleta-3.jpeg";
+// PATROCINADORES
 import playtennis from "./assets/play-tennis.jpeg";
 import cbc from "./assets/cbc.jpeg";
 import taroii from "./assets/taroii.jpeg";
@@ -294,124 +304,233 @@ Em parceria com a PlayTennis, nasce a ADK PlayTennis São Paulo.`,
   },
 ];
 
-export const units: Unit[] = [
+export const units = [
   {
     id: "itajaí-sede",
-    name: "Sede da ADK Tennis",
+    name: "ADK Itajaí",
     city: "Itajaí - SC",
+
     description:
-      "Nossa sede principal é um dos complexos de tênis mais respeitáveis e modernos da América do Sul. Estrutura impecável integrada à natureza.",
-    courts: "15 quadras de saibro (3 cobertas) + 2 quadras rápidas",
+      "A unidade de Itajaí conta com uma estrutura completa para o desenvolvimento de atletas, reunindo quadras, preparação física, fisioterapia e diferentes recursos de suporte ao treinamento em um único ambiente.",
+
+    courts: "15 quadras de saibro, sendo 3 cobertas, e 2 quadras rápidas.",
+
     amenities: [
-      "Academia de ginástica totalmente equipada para tênis",
-      "Sala de Fisioterapia integrada e avaliação biomecânica",
-      "Pista de corrida profissional de atletismo",
-      "Vestiários modernos adaptados de alto padrão",
-      "Cafeteria, restaurante e Pro Shop de artigos esportivos",
+      "Academia completa para preparação física",
+      "Estrutura de fisioterapia e acompanhamento dos atletas",
+      "Pista para corrida e preparação física",
+      "Vestiários completos",
+      "Restaurante e cafeteria",
+      "Loja de artigos esportivos",
+      "Estrutura integrada ao Itamirim Clube de Campo",
     ],
-    address: "Rua José Gall, nº 1106 - Itamirim Clube de Campo - Itajaí - SC",
-    phone: "(47) 99153-1800",
-    email: "contato@adktennis.com.br",
+
+    address: "Rua José Gall, 1006 – Itamirim Clube de Campo\nItajaí – SC",
+
+    phone: "(47) 999153-1800",
+
+    email: "itamirim.tenis@gmail.com",
+
     image: itajai,
   },
+
   {
     id: "brasilia",
     name: "ADK PlayTennis Brasília",
-    city: "Brasília",
+    city: "Brasília - DF",
+
     description:
-      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
-    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
+      "A ADK PlayTennis Brasília está localizada no Eixo Monumental, no coração de Brasília, unindo a metodologia de formação e desenvolvimento de atletas da ADK Tennis a uma estrutura completa para treinamento de tênis.",
+
+    courts: "5 quadras rápidas de tênis, descobertas e iluminadas.",
+
     amenities: [
-      "Aulas individuais sofisticadas de formação tática",
-      "Análise por vídeo e feedback de quadra integrada",
-      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
-      "Preparação esportiva juvenil para admissão em universidades americanas",
+      "Vestiários",
+      "Estacionamento gratuito",
+      "Bar e restaurante",
+      "Serviço de encordoamento",
+      "Duchas externas",
+      "Mini-loja com produtos essenciais",
+      "Sala de reunião",
+      "Massagem esportiva",
     ],
-    address: "Bairro Pompeia - São Paulo - SP",
-    phone: "(11) 98765-4321 / (11) 3662-7000",
-    email: "pompeia@adktennis.com.br",
+
+    address:
+      "ST SRPN Centro Esportivo\nAo lado do Ginásio Nilson Nelson\nBrasília – DF",
+
+    phone: "(61) 98144-3898\n(61) 3251-4502",
+
+    email: "",
+
     image: brasilia,
   },
+
   {
     id: "sorocaba-play",
-    name: "ADK PlayTennis Sorocaba",
+    name: "ADK Sorocaba",
     city: "Sorocaba - SP",
+
     description:
-      "Centro com foco em base competitiva e treinamento de alta performance. Comandada pelo treinador Thomas Arnold, certificado ITF Grau Máximo.",
-    courts: "Quadras de saibro e piso rápido preparadas para circuitos",
+      "A ADK Sorocaba é uma unidade voltada à formação e ao desenvolvimento de atletas, da iniciação ao alto rendimento, seguindo a metodologia e a filosofia de treinamento da ADK Tennis.",
+
+    courts: "9 quadras de saibro descobertas e iluminadas.",
+
     amenities: [
-      "Capacitação técnica regular alinhada com grade ITF",
-      "Preparação física especializada juvenil",
-      "Acompanhamento direto e testes coordenativos periódicos",
-      "Intercâmbios facilitados com a sede em Itajaí para semanas de saibro",
+      "Vestiários",
+      "Estacionamento gratuito",
+      "Lanchonete",
+      "Loja de artigos esportivos",
+      "Área de convivência",
+      "Parquinho infantil",
     ],
-    address: "Região Central de Sorocaba, parceiras integradas - SP",
-    phone: "(15) 3030-9000",
-    email: "sorocaba@adktennis.com.br",
+
+    address: "Rua Professor Magalhães de Noronha, 167\nSorocaba – SP",
+
+    phone: "WhatsApp ADK Sorocaba: (47) 99923-5080",
+
+    email: "",
+
     image: sorocaba,
   },
+
   {
+    /*
+      MANTIVE O ID ANTIGO PARA NÃO QUEBRAR
+      EVENTUAIS LINKS/NAVEGAÇÕES EXISTENTES.
+    */
     id: "sp-pompeia",
-    name: "ADK PlayTennis São José do Rio Preto",
+
+    name: "ADK São José do Rio Preto",
+
     city: "São José do Rio Preto - SP",
+
     description:
-      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
-    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
+      "A ADK São José do Rio Preto está localizada no Palestra Esporte Clube e leva à região a metodologia ADK de formação, desenvolvimento e alto rendimento, com equipe técnica especializada e acompanhamento voltado à evolução de atletas.",
+
+    courts: "9 quadras de saibro para treinamento e prática de tênis.",
+
     amenities: [
-      "Aulas individuais sofisticadas de formação tática",
-      "Análise por vídeo e feedback de quadra integrada",
-      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
-      "Preparação esportiva juvenil para admissão em universidades americanas",
+      "Estrutura integrada ao Palestra Esporte Clube",
+      "Academia para preparação física",
+      "Vestiários",
+      "Áreas esportivas e de convivência",
+      "Estrutura completa de clube para suporte à rotina dos atletas",
     ],
-    address: "Bairro Pompeia - São Paulo - SP",
-    phone: "(11) 98765-4321 / (11) 3662-7000",
-    email: "pompeia@adktennis.com.br",
+
+    structureNote:
+      "O Palestra mantém estrutura esportiva ampla, incluindo academia, piscinas e diversas instalações de esporte e lazer.",
+
+    address:
+      "Palestra Esporte Clube\nAv. Fernando Bonvino, 2184 – Distrito Industrial\nSão José do Rio Preto – SP\nCEP 15035-460",
+
+    phone: "WhatsApp: (17) 98173-6836",
+
+    email: "",
+
+    // Você vai trocar a foto manualmente depois.
     image: pompeia,
   },
+
   {
+    /*
+      MANTIVE "sp-sp" PORQUE ESSE ID JÁ É
+      USADO EM OUTRAS PARTES DO SITE.
+    */
     id: "sp-sp",
-    name: "ADK PlayTennis São Paulo",
+
+    name: "ADK PlayTennis São Paulo – Pompeia",
+
     city: "São Paulo - SP",
+
     description:
-      "Nova unidade estratégica de expansão trazendo a metodologia consagrada de Santa Catarina para o maior centro urbano de tênis do Brasil.",
-    courts: "Quadras rápidas cobertas e ao ar livre de alta velocidade",
+      "A ADK PlayTennis São Paulo – Pompeia leva a metodologia ADK para a capital paulista, com uma estrutura completa voltada à formação, desenvolvimento e alto rendimento de atletas. A unidade está localizada na Zona Oeste de São Paulo.",
+
+    courts:
+      "6 quadras de tênis, sendo 3 quadras de saibro cobertas e 3 quadras rápidas descobertas, todas com iluminação profissional.",
+
     amenities: [
-      "Aulas individuais sofisticadas de formação tática",
-      "Análise por vídeo e feedback de quadra integrada",
-      "Clínicas exclusivas ministradas pelo staff ADK Itajaí",
-      "Preparação esportiva juvenil para admissão em universidades americanas",
+      "3 quadras de saibro cobertas",
+      "3 quadras rápidas descobertas",
+      "Tecnologia Wingfield para análise de desempenho",
+      "Vestiários",
+      "Loja com encordoamento, produtos e acessórios",
+      "Lanchonete",
+      "Estacionamento",
     ],
-    address: "Bairro Pompeia - São Paulo - SP",
-    phone: "(11) 98765-4321 / (11) 3662-7000",
-    email: "pompeia@adktennis.com.br",
+
+    address:
+      "Avenida Marquês de São Vicente, 2477 – Água Branca\nSão Paulo – SP",
+
+    phone: "WhatsApp ADK São Paulo: (11) 99961-4188",
+
+    email: "",
+
     image: saopaulo,
   },
 ];
 
-export const team: TeamMember[] = [
+export const team = [
   {
     id: "patricio-arnold",
-    name: "Patrício Arnold",
-    role: "Diretor Técnico & Fundador",
-    credentials: "Ex-tenista profissional, formador de campeões sul-americanos",
-    bio: "Responsável pelo alinhamento geral da metodologia de alto rendimento. Com vasta experiência nos circuitos mundiais juvenis e de transição profissional, lidera a expansão técnica pelo Brasil.",
+    name: "Patricio Arnold",
+    role: "Diretor Técnico e Head Coach",
+    credentials: "Direção Técnica ADK Tennis",
+    bio: "Ex-tenista profissional argentino e nº 1 mundial juvenil em 1988. Foi finalista do NCAA em simples pela University of Georgia, alcançou o nº 134 do ranking ATP de simples e o nº 93 em duplas, além de representar a Argentina na Copa Davis. Atualmente lidera a direção técnica e o desenvolvimento da metodologia ADK Tennis.",
     image: patricio,
   },
+
+  {
+    id: "luiz-peniza",
+    name: "Luiz Peniza",
+    role: "Head Coach — ADK Itajaí",
+    credentials: "Alto Rendimento e Desenvolvimento de Atletas",
+    bio: "Treinador de alto rendimento com ampla experiência no desenvolvimento de atletas. É atualmente capitão do Time Brasil na Billie Jean King Cup e participa diretamente de projetos de desenvolvimento do tênis brasileiro promovidos pela Confederação Brasileira de Tênis.",
+    image: luiz,
+  },
+
+  {
+    id: "douglas-oliveira-junior",
+    name: "Douglas Oliveira Júnior",
+    role: "Coordenador Técnico — ADK Itajaí",
+    credentials: "Formação e Desenvolvimento de Atletas",
+    bio: "Treinador com longa trajetória dentro da ADK Tennis e experiência na formação de jovens atletas. Já atuou e atua como capitão da equipe brasileira masculina de 14 anos em competições internacionais, além de acompanhar atletas da ADK em torneios nacionais e internacionais.",
+    image: douglas,
+  },
+
   {
     id: "thomas-arnold",
     name: "Thomas Arnold",
-    role: "COORDENADOR TÉNICO",
-    credentials: "Certificação ITF Nível 3 (Nível Máximo)",
-    bio: "Treinador altamente credenciado pela Federação Internacional de Tênis. Especialista em planejamento tático e biomecânica refinada para atletas infantojuvenis de elite.",
+    role: "Coordenador Técnico — ADK Sorocaba",
+    credentials: "Treinador certificado ITF Nível 3",
+    bio: "Treinador certificado ITF Nível 3, com atuação voltada à formação, desenvolvimento e alto rendimento. É responsável pela coordenação técnica da ADK Sorocaba e pela aplicação da metodologia ADK na unidade.",
     image: thomas,
   },
+
   {
-    id: "fisioteam",
-    name: "Luiz Peniza",
-    role: "COORDENADOR TÉNICO",
-    credentials: "Especialista em Fisioterapia Esportiva de Elite",
-    bio: "Exerce papel crucial na prevenção de lesões, recuperação ativa pós-treino e recondicionamento motor celular de nossos tenistas em transição.",
-    image: luiz,
+    id: "bia-cecato",
+    name: "Bia Cecato",
+    role: "Coordenadora Técnica — ADK PlayTennis São Paulo – Pompeia",
+    credentials: "Ex-tenista profissional • ITF Nível 3",
+    bio: "Ex-tenista profissional com passagem pelo circuito WTA e treinadora certificada ITF Nível 3. Integra também a capacitação de treinadores CBT/ITF e atualmente é responsável pela coordenação técnica da ADK PlayTennis São Paulo – unidade Pompeia.",
+    image: bia,
+  },
+
+  {
+    id: "eder-barboza",
+    name: "Éder Barboza",
+    role: "Head Coach — ADK São José do Rio Preto",
+    credentials: "Formação e Alto Rendimento",
+    bio: "Treinador especializado em formação e alto rendimento, com trabalho desenvolvido em São José do Rio Preto desde 2006. Possui experiência no comando de seleções brasileiras juvenis e participou da formação de atletas que chegaram ao alto nível internacional, entre elas Luisa Stefani.",
+    image: eder,
+  },
+
+  {
+    id: "mario-mendonca",
+    name: "Mário Mendonça",
+    role: "Head Coach — ADK PlayTennis Brasília",
+    credentials: "Formação e Desenvolvimento de Jovens Atletas",
+    bio: "Treinador com ampla experiência na formação e no desenvolvimento de jovens atletas. É Head Coach da equipe de alto rendimento da ADK PlayTennis Brasília e possui diversas experiências como capitão de seleções brasileiras juvenis em competições internacionais.",
+    image: mario,
   },
 ];
 

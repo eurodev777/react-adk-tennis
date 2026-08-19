@@ -21,9 +21,6 @@ export const SponsorMarquee: React.FC<SponsorMarqueeProps> = ({ sponsors }) => {
           <span className="w-2 h-2 rounded-full bg-adk-yellow"></span>
           Patrocinadores &amp; Parcerias Oficiais
         </h4>
-        <span className="text-[10px] font-mono text-zinc-500 uppercase">
-          ADK Tennis Network © 2026
-        </span>
       </div>
 
       <div className="relative w-full overflow-hidden">

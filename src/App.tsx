@@ -97,7 +97,7 @@ export default function App() {
               id="home-bento-grid"
             >
               <div className="max-w-7xl mx-auto px-4 space-y-12">
-                <div className="text-center max-w-2xl mx-auto space-y-2">
+                <div className="text-center max-w-3xl mx-auto space-y-2">
                   <span className="text-xs font-mono font-bold text-adk-yellow tracking-widest uppercase">
                     METODOLOGIA INTEGRADA DE ALTA PERFORMANCE
                   </span>
@@ -158,10 +158,10 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-3 border border-white/10 rounded-lg overflow-hidden bg-zinc-950">
                   {/* Layout 1: Itajaí Base */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end border-b md:border-b-0 md:border-r border-white/10 transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div
+                    {/* <div
                       className={`absolute inset-0 z-0 bg-[url('/card1.jpg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500`}
                     ></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div> */}
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
                       <div className="absolute top-0 right-0 text-[72px] font-black font-display text-white/5 italic leading-none select-none">
@@ -215,7 +215,7 @@ export default function App() {
                       </div>
                       <button
                         onClick={() => handleNavigateTab("unidades")}
-                        className="bg-adk-yellow text-zinc-950 hover:bg-white hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
+                        className="border border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
                       >
                         Visualizar Unidades
                       </button>
@@ -224,8 +224,8 @@ export default function App() {
 
                   {/* Layout 3: Rede Nacional */}
                   <div className="relative min-h-[380px] p-8 flex flex-col justify-end transition-all duration-300 hover:bg-zinc-900/50 overflow-hidden group">
-                    <div className="absolute inset-0 z-0 bg-[url('/card3.jpeg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div>
+                    {/* <div className="absolute inset-0 z-0 bg-[url('/card3.jpeg')] bg-cover bg-center opacity-10 group-hover:scale-105 group-hover:opacity-15 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/70 to-transparent z-1"></div> */}
 
                     <div className="relative z-10 flex flex-col h-full justify-between">
                       <div className="absolute top-0 right-0 text-[72px] font-black font-display text-white/5 italic leading-none select-none">
@@ -246,9 +246,9 @@ export default function App() {
                       </div>
                       <button
                         onClick={() => handleNavigateTab("atletas")}
-                        className="border border-white text-white hover:bg-white hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
+                        className="border border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
                       >
-                        Histórico Atletas
+                        Nossos Atletas
                       </button>
                     </div>
                   </div>
@@ -261,22 +261,24 @@ export default function App() {
                 >
                   <div className="space-y-2">
                     <span className="inline-block px-3 py-1 bg-adk-yellow/10 text-adk-yellow text-[10px] font-extrabold uppercase rounded tracking-widest">
-                      Inscrições Abertas Agosto a Dezembro 2026
+                      VENHA TREINAR COM A GENTE
                     </span>
                     <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-white leading-none">
-                      INSCRIÇÕES ABERTAS DE AGOSTO A DEZEMBRO.
+                      FAÇA PARTE DA ADK
                     </h3>
                     <p className="text-xs text-zinc-400 font-sans max-w-xl">
-                      Garanta sua vaga de 1 a 5 semanas sob tutela técnica
-                      direta e preparação de torneio interno UTR. Hospedagem
-                      integrada com refeitório de elite inclusa disponível.
+                      Encontre o programa ideal para o seu tênis.
+                      <br />
+                      Da iniciação ao alto rendimento, a ADK oferece treinamento
+                      para diferentes idades, níveis e objetivos, com
+                      metodologia aplicada por toda a nossa equipe técnica.
                     </p>
                   </div>
                   <button
                     onClick={() => handleNavigateTab("intensivo")}
                     className="bg-adk-yellow hover:bg-white text-zinc-950 px-6 py-3.5 rounded text-xs font-bold uppercase tracking-wider transform hover:-translate-y-0.5 duration-200 cursor-pointer text-center whitespace-nowrap shrink-0"
                   >
-                    Simular e Reservar Vaga
+                    AGENDAR TREINO TESTE
                   </button>
                 </div>
               </div>
@@ -393,14 +395,14 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-left">
             {/* Column 1 */}
             <div className="space-y-4">
-              <span className="text-lg font-black font-display text-white tracking-widest">
-                ADK<span className="text-adk-yellow">TENNIS</span>
+              <span className="text-lg font-black font-display text-[#d1dc37] tracking-widest">
+                ADK TENNIS
               </span>
               <p className="text-xs text-zinc-400 leading-relaxed font-sans font-light">
-                Centro de Treinamento de Tênis de alto rendimento situado no
-                Itamirim Clube de Campo em Itajaí, SC. Formando atletas,
-                promovendo cidadania e promovendo a elite esportiva nacional
-                desde 2013.
+                Centro de treinamento de tênis de alto rendimento, referência
+                nacional na formação de atletas. Da iniciação ao competitivo,
+                desenvolvemos atletas por meio de metodologia própria,
+                excelência técnica e formação integral.
               </p>
 
               <div className="flex space-x-3 pt-2" id="footer-social-circles">
@@ -424,7 +426,7 @@ export default function App() {
             {/* Column 2 */}
             <div className="space-y-3">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-adk-yellow">
-                Navegação Expressa
+                NAVEGAÇÃO
               </h4>
               <ul className="space-y-2 text-xs font-sans">
                 <li>
@@ -464,7 +466,7 @@ export default function App() {
                     onClick={() => handleNavigateTab("intensivo")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
-                    Intensivo
+                    Intensivos
                   </button>
                 </li>
                 <li>
@@ -489,7 +491,7 @@ export default function App() {
             {/* Column 3 */}
             <div className="space-y-3">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-adk-yellow">
-                Zonas Estratégicas
+                DESTAQUES
               </h4>
               <ul className="space-y-2 text-xs font-sans">
                 <li>
@@ -505,7 +507,7 @@ export default function App() {
                     onClick={() => handleOpenUnit("sorocaba-play")}
                     className="text-zinc-400 hover:text-adk-yellow"
                   >
-                    ADK PlayTennis Sorocaba
+                    ADK Sorocaba
                   </button>
                 </li>
                 <li>
@@ -522,7 +524,7 @@ export default function App() {
                     onClick={() => handleNavigateTab("intensivo")}
                     className="text-zinc-400 hover:text-adk-yellow block font-bold"
                   >
-                    Inscrição Intensivo Itajaí
+                    Intensivos ADK
                   </button>
                 </li>
               </ul>
@@ -548,11 +550,11 @@ export default function App() {
           </div>
 
           <div className="pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono">
-            <span>
-              © 2013 - 2026 - ADK Tennis - Academia de Alto Rendimento - Escola
-              de Tênis - Centro de Treinamento de Tênis - Itajaí | Balneário
-              Camboriú - Santa Catarina.
-            </span>
+            <p>
+              © 2005–{new Date().getFullYear()} ADK Tennis. Todos os direitos
+              reservados. Centro de treinamento de tênis de alto rendimento e
+              referência nacional na formação de atletas.
+            </p>
             <div className="flex space-x-4">
               <a href="#" className="hover:text-white transition-colors">
                 Política de Privacidade
