@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  Trophy,
-  Users,
-  Globe,
-  Flame,
-  ZoomIn,
-} from "lucide-react";
+import { Trophy, Users, Globe, Flame, ZoomIn } from "lucide-react";
 
 import { units } from "../data";
 import sobre from "../assets/patricio-arnold.jpeg";
@@ -52,31 +46,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     >
       <div className="max-w-7xl mx-auto px-4">
         <div className="space-y-16" id="about-content-quemsomos">
-
           {/* =====================================================
               QUEM SOMOS - TEXTO PRINCIPAL + IMAGEM
           ====================================================== */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
             {/* TEXTO */}
             <div className="lg:col-span-7 space-y-6">
-
               <span className="text-adk-yellow font-mono text-xs font-extrabold uppercase tracking-widest">
                 Centro de Excelência Esportiva
               </span>
 
               <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight leading-none text-white">
                 REFERÊNCIA NA FORMAÇÃO DE{" "}
-                <span className="text-adk-yellow">
-                  ATLETAS
-                </span>
+                <span className="text-adk-yellow">ATLETAS</span>
               </h2>
 
               <div className="h-1.5 w-20 bg-adk-yellow rounded"></div>
 
               <p className="text-zinc-300 font-sans leading-relaxed text-base">
-                A <strong>ADK Tennis</strong> é um centro de treinamento de tênis
-                de alto rendimento, referência nacional na formação e
+                A <strong>ADK Tennis</strong> é um centro de treinamento de
+                tênis de alto rendimento, referência nacional na formação e
                 desenvolvimento de atletas. Nossa metodologia acompanha cada
                 etapa da evolução, da iniciação ao alto rendimento.
               </p>
@@ -92,7 +81,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
               {/* BOTÕES */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
-
                 <button
                   onClick={() => onNavigateTab("programas")}
                   className="bg-zinc-920 text-white font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 rounded border border-zinc-700 hover:border-adk-yellow hover:text-adk-yellow transition-all duration-200 cursor-pointer"
@@ -106,13 +94,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 >
                   Mais informações
                 </button>
-
               </div>
             </div>
 
             {/* IMAGEM */}
             <div className="lg:col-span-5 relative">
-
               {/* DETALHE SUPERIOR */}
               <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-adk-yellow"></div>
 
@@ -128,7 +114,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <div className="absolute bottom-4 left-4 bg-zinc-950/90 text-white px-3 py-1.5 rounded text-xs font-mono border border-zinc-800">
                 Itamirim Clube de Campo, Itajaí
               </div>
-
             </div>
           </div>
 
@@ -136,7 +121,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               PILARES DA ADK
           ====================================================== */}
           <div className="pt-8 border-t border-zinc-850">
-
             <div className="mb-8">
               <span className="text-adk-yellow font-mono text-xs font-extrabold uppercase tracking-widest">
                 Nossa filosofia
@@ -148,7 +132,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
               {pillars.map((pillar, idx) => {
                 const Icon = pillar.icon;
 
@@ -170,7 +153,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                       flex-col
                     "
                   >
-
                     {/* ÍCONE */}
                     <div
                       className="
@@ -211,11 +193,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     <p className="text-sm text-zinc-400 font-sans leading-relaxed">
                       {pillar.desc}
                     </p>
-
                   </div>
                 );
               })}
-
             </div>
           </div>
 
@@ -223,23 +203,19 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               NOSSAS UNIDADES
           ====================================================== */}
           <div className="space-y-8 pt-8">
-
             <div className="text-center max-w-xl mx-auto space-y-2">
-
               <h3 className="text-2xl font-black font-display uppercase tracking-tight text-white">
                 NOSSAS UNIDADES
               </h3>
 
               <p className="text-xs text-zinc-400">
-                A ADK Tennis utiliza a infraestrutura completa do Itamirim
-                Clube de Campo. Um ecossistema de treinamento absoluto.
+                A metodologia ADK está presente em diferentes regiões do Brasil.
+                Conheça nossas unidades e encontre a mais próxima de você.
               </p>
-
             </div>
 
             {/* GALERIA DAS UNIDADES */}
             <div className="flex lg:flex-row flex-col gap-4 justify-center items-center">
-
               {structureGallery.map((item, index) => (
                 <div
                   key={index}
@@ -256,7 +232,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     cursor-pointer
                   "
                 >
-
                   <img
                     src={item.image}
                     alt={item.name}
@@ -278,7 +253,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
                   {/* TEXTO */}
                   <div className="absolute bottom-2 left-2 right-2 text-left z-20">
-
                     <span className="block text-[10px] font-bold text-adk-yellow uppercase tracking-tighter truncate leading-none">
                       {item.city}
                     </span>
@@ -286,7 +260,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     <span className="block text-[9px] font-sans text-white text-light truncate mt-0.5">
                       {item.name}
                     </span>
-
                   </div>
 
                   {/* ÍCONE ZOOM */}
@@ -306,13 +279,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                   >
                     <ZoomIn className="w-3.5 h-3.5 text-adk-yellow" />
                   </div>
-
                 </div>
               ))}
-
             </div>
           </div>
-
         </div>
       </div>
 
@@ -325,12 +295,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           onClick={() => setSelectedPhoto(null)}
           id="gallery-lightbox"
         >
-
           <div
             className="relative max-w-4xl max-h-[85vh]"
             onClick={(e) => e.stopPropagation()}
           >
-
             <img
               src={selectedPhoto}
               alt="Visualização ampliada da infraestrutura ADK"
@@ -359,11 +327,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             >
               Fechar Visualização
             </button>
-
           </div>
         </div>
       )}
-
     </section>
   );
 };

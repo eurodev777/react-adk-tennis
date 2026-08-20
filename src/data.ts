@@ -16,16 +16,16 @@ import itajai from "./assets/itajai.jpeg";
 import brasilia from "./assets/brasilia.jpeg";
 import pompeia from "./assets/pompeia.jpeg";
 import sorocaba from "./assets/sorocaba.jpeg";
-import saojose from "./assets/sao-jose.jpeg";
+import saojose from "./assets/rio-preto.jpeg";
 import saopaulo from "./assets/banner1.jpeg";
 // TIME
-import patricio from "./assets/patricio-arnold.jpeg";
-import thomas from "./assets/banner-thomas.jpeg";
-import luiz from "./assets/luiz-peniza.jpeg";
-import douglas from "./assets/luiz-peniza.jpeg";
-import bia from "./assets/luiz-peniza.jpeg";
-import eder from "./assets/luiz-peniza.jpeg";
-import mario from "./assets/luiz-peniza.jpeg";
+import patricio from "./assets/patricio-arnold.png";
+import thomas from "./assets/thomas.png";
+import luiz from "./assets/luiz-peniza.png";
+import douglas from "./assets/logo.png";
+import bia from "./assets/logo.png";
+import eder from "./assets/logo.png";
+import mario from "./assets/logo.png";
 // NOTICIAS
 import noticia1 from "./assets/noticia-1.jpg";
 import noticia2 from "./assets/noticia-2.jpg";
@@ -428,7 +428,7 @@ export const units = [
     email: "",
 
     // Você vai trocar a foto manualmente depois.
-    image: pompeia,
+    image: saojose,
   },
 
   {
