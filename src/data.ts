@@ -25,7 +25,7 @@ import luiz from "./assets/luiz-peniza.png";
 import douglas from "./assets/logo.png";
 import bia from "./assets/logo.png";
 import eder from "./assets/logo.png";
-import mario from "./assets/logo.png";
+import mario from "./assets/mario.png";
 // NOTICIAS
 import noticia1 from "./assets/noticia-1.jpg";
 import noticia2 from "./assets/noticia-2.jpg";
