@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Trophy, Users, Globe, Flame, ZoomIn } from "lucide-react";
 
 import { units } from "../data";
-import sobre from "../assets/patricio-arnold.jpeg";
+import sobre from "../assets/patricio-arnold.png";
 
 interface AboutSectionProps {
   onNavigateTab: (tabId: string) => void;
