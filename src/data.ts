@@ -22,9 +22,9 @@ import saopaulo from "./assets/banner1.jpeg";
 import patricio from "./assets/patricio-arnold.png";
 import thomas from "./assets/thomas.png";
 import luiz from "./assets/luiz-peniza.png";
-import douglas from "./assets/logo.png";
-import bia from "./assets/logo.png";
-import eder from "./assets/logo.png";
+import douglas from "./assets/douglas.png";
+import bia from "./assets/bia.png";
+import eder from "./assets/eder.png";
 import mario from "./assets/mario.png";
 // NOTICIAS
 import noticia1 from "./assets/noticia-1.jpg";
