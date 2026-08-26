@@ -9,8 +9,7 @@ interface ProgramsSectionProps {
 export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
   onNavigateTab,
 }) => {
-  const [selectedProgram, setSelectedProgram] =
-    useState<string>("baby-tenis");
+  const [selectedProgram, setSelectedProgram] = useState<string>("baby-tenis");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -25,11 +24,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
   const activeProgram =
     programs.find((p) => p.id === selectedProgram) || programs[0];
 
-  const programsWithLevel = [
-    "pre-competicao",
-    "competicao",
-    "alto-rendimento",
-  ];
+  const programsWithLevel = ["pre-competicao", "competicao", "alto-rendimento"];
 
   const hasLevel = programsWithLevel.includes(activeProgram.id);
 
@@ -67,9 +62,8 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
           </h2>
 
           <p className="text-zinc-400 font-sans text-sm">
-            Programas regulares de treinamento para diferentes idades, níveis e
-            objetivos, da iniciação ao alto rendimento, seguindo a metodologia
-            ADK Tennis.
+            Programas de treinamento para diferentes idades, níveis e objetivos,
+            da iniciação ao alto rendimento, seguindo a metodologia ADK Tennis.
           </p>
         </div>
 
