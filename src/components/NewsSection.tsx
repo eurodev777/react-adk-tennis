@@ -23,18 +23,19 @@ export const NewsSection: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-12">
           <div className="text-left space-y-2">
             <span className="text-xs uppercase font-extrabold tracking-widest text-adk-yellow bg-adk-yellow/10 px-4 py-1 rounded inline-block">
-              Atualizações do Campo
+              NOTÍCIAS ADK
             </span>
             <h2 className="text-4xl md:text-5xl font-black font-display uppercase tracking-tighter leading-none">
-              ÚLTIMAS <span className="text-adk-yellow">NOTÍCIAS ADK</span>
+              ÚLTIMAS <span className="text-adk-yellow">NOTÍCIAS</span>
             </h2>
             <p className="text-zinc-400 font-sans text-sm max-w-lg">
-              Acompanhe novidades de torneios, expansão nacional, convocações de
-              Davis Cup e agenda esportiva das sedes.
+              Acompanhe os principais resultados dos nossos atletas, novidades
+              das unidades, competições, projetos e acontecimentos da ADK
+              Tennis.
             </p>
           </div>
           <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest hidden md:block">
-            CIRCUITO COMPETITIVO 2026
+            ADK TENNIS • 2026
           </span>
         </div>
 

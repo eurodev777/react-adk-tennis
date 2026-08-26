@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Trophy, Users, Globe, Flame, ZoomIn } from "lucide-react";
 
 import { units } from "../data";
-import sobre from "../assets/patricio-arnold.png";
+import sobre from "../assets/slide1.png";
 
 interface AboutSectionProps {
   onNavigateTab: (tabId: string) => void;
@@ -70,29 +70,20 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 etapa da evolução, da iniciação ao alto rendimento.
               </p>
 
-              <p className="text-zinc-400 font-sans leading-relaxed text-sm">
-                Atualmente contamos com 5 unidades esportivas com as melhores
-                práticas técnico-táticas globais. Sob a supervisão dos
-                fundadores e diretores técnicos, a rede atua desde a iniciação
-                até o acompanhamento integral em torneios de Grand Slam e da
-                Davis Cup, integrando preparação psicológica, medicina
-                preventiva e coach avançado.
-              </p>
-
               {/* BOTÕES */}
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <button
                   onClick={() => onNavigateTab("programas")}
                   className="bg-zinc-920 text-white font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 rounded border border-zinc-700 hover:border-adk-yellow hover:text-adk-yellow transition-all duration-200 cursor-pointer"
                 >
-                  Programas de Treino
+                  CONHEÇA NOSSOS PROGRAMAS
                 </button>
 
                 <button
                   onClick={() => onNavigateTab("contato")}
                   className="bg-adk-yellow hover:bg-white text-zinc-950 font-extrabold text-xs uppercase tracking-wider px-5 py-3.5 rounded transition-all duration-200 cursor-pointer"
                 >
-                  Mais informações
+                  CONHEÇA NOSSAS UNIDADES
                 </button>
               </div>
             </div>
@@ -110,10 +101,6 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 alt="Tenistas profissionais treinando na quadra de saibro da ADK"
                 className="rounded shadow-2xl w-full h-[350px] object-cover ring-1 ring-zinc-850 filter brightness-95"
               />
-
-              <div className="absolute bottom-4 left-4 bg-zinc-950/90 text-white px-3 py-1.5 rounded text-xs font-mono border border-zinc-800">
-                Itamirim Clube de Campo, Itajaí
-              </div>
             </div>
           </div>
 

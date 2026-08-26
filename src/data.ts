@@ -34,6 +34,9 @@ import noticia3 from "./assets/noticia-3.jpg";
 import atleta1 from "./assets/atleta-1.jpeg";
 import atleta2 from "./assets/atleta-2.jpeg";
 import atleta3 from "./assets/atleta-3.jpeg";
+import atleta4 from "./assets/atleta-1.jpeg";
+import atleta5 from "./assets/atleta-2.jpeg";
+import atleta6 from "./assets/atleta-3.jpeg";
 // PATROCINADORES
 import playtennis from "./assets/play-tennis.jpeg";
 import cbc from "./assets/cbc.jpeg";
@@ -133,70 +136,97 @@ export const sponsors: Sponsor[] = [
 
 export const programs: Program[] = [
   {
-    id: "kids-iniciacao",
-    title: "Iniciação & Kids (a partir de 3 anos)",
-    subtitle: "O primeiro contato lúdico com eixos de coordenação",
+    id: "baby-tenis",
+    title: "Baby Tênis",
+    subtitle:
+      "Iniciação ao tênis de forma lúdica, com atividades e materiais adaptados à faixa etária.",
     description:
-      "Método focado no desenvolvimento motor, introdução de regras básicas e amor ao esporte através de jogos divertidos e equipamentos adaptados (bolas lentas e raquetes proporcionais).",
-    ageRange: "3 - 8 anos",
-    target: "Iniciantes / Socialização",
+      "Programa voltado para crianças de 3 a 4 anos, com introdução ao tênis de forma lúdica, permitindo que as crianças conheçam os primeiros elementos do esporte por meio de atividades e materiais adequados à sua idade.",
+    ageRange: "3 a 4 anos",
+    target: "Iniciação",
     features: [
-      "Desenvolvimento de coordenação motora fina e ampla",
-      "Bolas de transição (Vermelha e Laranja)",
-      "Turmas reduzidas com professores especializados",
-      "Interação social e cooperação esportiva",
+      "1 aula por semana",
+      "Período da manhã",
+      "45 minutos de duração",
+      "Turmas de 4 a 8 alunos",
     ],
     image:
       "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
   },
+
+  {
+    id: "adk-kids",
+    title: "ADK Kids",
+    subtitle:
+      "Aprendizado e desenvolvimento dos fundamentos do tênis através da metodologia Play and Stay.",
+    description:
+      "Programa voltado para crianças de 5 a 10 anos. Através da metodologia específica Play and Stay, os alunos aprendem e praticam tênis em um ambiente seguro e apropriado, utilizando uma abordagem adequada ao seu estágio de desenvolvimento.",
+    ageRange: "5 a 10 anos",
+    target: "Desenvolvimento / Play and Stay",
+    features: [
+      "De 1 a 5 vezes por semana",
+      "Período da manhã",
+      "1 hora de duração",
+      "Turmas de 4 a 6 alunos",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+  },
+
   {
     id: "pre-competicao",
-    title: "Pré-Competição & Aperfeiçoamento",
-    subtitle: "Lapidando a técnica e preparando a mente competitiva",
+    title: "Pré-Competição",
+    subtitle:
+      "Introdução ao treinamento competitivo, combinando desenvolvimento em quadra e preparação física.",
     description:
-      "Para jovens que já dominam os golpes básicos e desejam iniciar sua jornada nos circuitos infantojuvenis estaduais. Foco tático, consistência física e introdução à gestão de intensidade em quadra.",
-    ageRange: "9 - 14 anos",
-    target: "Intermediário competitivo",
+      "Programa de competição voltado para crianças e adolescentes de 9 a 16 anos, com nível iniciante a intermediário, preparando o atleta para uma rotina de treinamento mais estruturada e para sua evolução no ambiente competitivo.",
+    ageRange: "9 a 16 anos",
+    target: "Iniciante a intermediário",
     features: [
-      "Treinos de posicionamento dinâmicos e técnicas avançadas",
-      "Introdução à preparação física específica no saibro",
-      "Feedback constante de desempenho",
-      "Simulações de torneio e jogos com contagem real",
+      "De 1 a 5 vezes por semana",
+      "Período da tarde",
+      "1 hora de treino em quadra",
+      "Preparação física",
     ],
     image:
       "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
   },
+
+  {
+    id: "competicao",
+    title: "Competição",
+    subtitle:
+      "Programa destinado a atletas que já possuem maior nível técnico e estão inseridos no ambiente competitivo.",
+    description:
+      "Programa de treinamento voltado para crianças e adolescentes de 9 a 16 anos, com nível intermediário e avançado, oferecendo uma rotina mais completa de desenvolvimento em quadra e preparação física.",
+    ageRange: "9 a 16 anos",
+    target: "Intermediário e avançado",
+    features: [
+      "De 1 a 5 vezes por semana",
+      "Período da tarde",
+      "3 horas de treinamento",
+      "Treino de quadra",
+      "Preparação física",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+  },
+
   {
     id: "alto-rendimento",
-    title: "PROGRAMA INTENSIVO ADK TENNIS",
-    subtitle: "Uma semana de treinamento baseada na metodologia da ADK Tennis.",
+    title: "Alto Rendimento",
+    subtitle:
+      "Programa de treinamento avançado para atletas que buscam alto rendimento no tênis profissional ou universitário.",
     description:
-      "O Intensivo ADK Tennis foi desenvolvido para atletas que desejam potencializar sua evolução em um curto período. Durante uma semana, os participantes vivenciam uma rotina estruturada de treinamentos técnicos, táticos, físicos e competitivos, conduzidos pela equipe da ADK Tennis.",
-    ageRange: "14+ anos / Adultos",
-    target: "Alto Rendimento / Profissional",
+      "Programa voltado para adolescentes a partir de 15 anos, com nível avançado e que tenham como objetivo seguir no tênis profissional e/ou universitário.",
+    ageRange: "A partir de 15 anos",
+    target: "Avançado / Profissional / Universitário",
     features: [
-      "Treinamento técnico diário 1 ou 2 turnos",
-      "Preparação física específica para o tênis",
-      "Situações de jogo e competição",
-      "Gestão de calendário de torneios nacionais e internacionais",
-      "Acompanhamento da equipe técnica",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
-  },
-  {
-    id: "tenis-universitario",
-    title: "Transição Tênis Universitário (EUA)",
-    subtitle: "Conquiste bolsas de estudos em universidades americanas",
-    description:
-      "Preparação esportiva e suporte estratégico para atletas garantirem bolsas de estudo através do tênis nos EUA (NCAA, NAIA, NJCAA). A ADK possui pontes diretas com coaches americanos.",
-    ageRange: "16 - 20 anos",
-    target: "Bolsas de Estudo de Alto Nível",
-    features: [
-      "Vídeo de recrutamento profissional editado pela equipe",
-      "Acompanhamento personalizado do ranking UTR",
-      "Ponte e consultoria direta de elegibilidade e vestibular esportivo",
-      "Preparação tática para partidas de nível College Tennis",
+      "Programa 01: 5 vezes por semana em turno integral",
+      "Programa 02: 3 vezes por semana em turno integral",
+      "Programa 02: mais 5 vezes por semana no período da tarde",
+      "De 3 a 6 horas de treinamento",
+      "Foco no tênis profissional e/ou universitário",
     ],
     image:
       "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=600",
@@ -207,48 +237,118 @@ export const athletes: Athlete[] = [
   {
     id: "rafael-matos",
     name: "Rafael Matos",
-    category: "Profissional / Duplas",
+    category: "Profissional | Duplas",
     achievement:
-      "Campeão de Grand Slam (Mix Doubles Roland Garros & Australian Open), Top 30 ATP",
+      "Campeão do Australian Open 2023 em duplas mistas • Melhor ranking: Top 20 ATP em duplas",
     highlights: [
-      "Campeão de Duplas Mistas no Australian Open",
-      "Membro frequente da equipe brasileira da Copa Davis",
-      "Formado na base e treina frequentemente no saibro da ADK Itamirim",
-      "Sólida carreira internacional com múltiplos títulos no circuito ATP",
+      "Campeão de duplas mistas do Australian Open 2023, ao lado de Luisa Stefani.",
+      "Campeão dos Masters 1000 de Montreal e Cincinnati em 2026, ao lado de Orlando Luz.",
+      "Campeão dos ATP 250 de Buenos Aires e Santiago em 2026, também com Orlando Luz.",
+      "Melhor ranking da carreira nas duplas: Top 20 ATP.",
+      "Múltiplos títulos de duplas no circuito ATP.",
+      "Representante do Brasil na Copa Davis.",
     ],
     image: atleta1,
-    bio: "Rafael Matos é um dos maiores expoentes das duplas do tênis brasileiro na última década. Desenvolveu-se no saibro sob os olhares da qualificada equipe técnica ADK Tennis de Itajaí.",
+    bio:
+      "Rafael Matos é um dos principais duplistas brasileiros da atualidade. Campeão de Grand Slam e vencedor de diversos títulos ATP, representa o Brasil no circuito internacional e integra o trabalho de alto rendimento da ADK Tennis.",
     status: "Ativo no Circuito ATP",
   },
+
   {
     id: "orlando-luz",
     name: "Orlando Luz",
-    category: "Profissional",
+    category: "Profissional | Duplas",
     achievement:
-      "Campeão de Duplas em Challenger Tour, Ex-Nº 1 do mundo juvenil",
+      "Campeão de Masters 1000 em 2026 • Melhor ranking: Top 15 ATP em duplas",
     highlights: [
-      "Medalhista nos Jogos Olímpicos da Juventude",
-      "Múltiplos títulos profissionais na modalidade de duplas e simples",
-      "Reconhecido pela solidez de golpes e garra em quadras de saibro",
-      "Preparação física centralizada na estrutura integrada da ADK",
+      "Campeão dos Masters 1000 de Montreal e Cincinnati em 2026, ao lado de Rafael Matos.",
+      "Campeão dos ATP 250 de Buenos Aires e Santiago em 2026.",
+      "Campeão juvenil de duplas de Wimbledon em 2014, ao lado de Marcelo Zormann.",
+      "Medalha de ouro em duplas nos Jogos Olímpicos da Juventude de 2014, também com Marcelo Zormann.",
+      "Medalha de prata em simples nos Jogos Olímpicos da Juventude de 2014.",
+      "Ex-nº 1 mundial juvenil e Top 15 ATP em duplas em 2026.",
     ],
     image: atleta3,
-    bio: "Orlando Luz tem uma brilhante trajetória desde a base, tendo alcançado o topo do ranking juvenil mundial. Na ADK Tennis, ele consolida seu treinamento físico e estratégico para o calendário mundial do Challenger e ATP Tours.",
-    status: "Ativo no Circuito Challenger/ATP",
+    bio:
+      "Orlando Luz construiu uma trajetória de destaque desde o circuito juvenil e atualmente compete entre os principais duplistas do circuito ATP. Ao lado de Rafael Matos, vive uma das melhores temporadas de sua carreira em 2026.",
+    status: "Ativo no Circuito ATP",
   },
+
+  {
+    id: "igor-marcondes",
+    name: "Igor Marcondes",
+    category: "Profissional | Simples e Duplas",
+    achievement:
+      "Melhor ranking: nº 258 ATP em simples • nº 209 ATP em duplas",
+    highlights: [
+      "Melhor ranking ATP de simples da carreira: nº 258.",
+      "Melhor ranking ATP de duplas da carreira: nº 209.",
+      "Em 2026 voltou a se aproximar do Top 300 ATP em simples.",
+      "Presença frequente em torneios Challenger e ITF internacionais.",
+      "Treinado por Patricio Arnold e Luiz Peniza.",
+      "Atleta ligado à ADK Tennis e à estrutura de treinamento de Itajaí.",
+    ],
+    image: atleta4,
+    bio:
+      "Igor Marcondes é tenista profissional brasileiro e atleta ligado à estrutura de alto rendimento da ADK Tennis. Canhoto, compete nos circuitos ATP Challenger e ITF em simples e duplas.",
+    status: "Ativo no Circuito Profissional",
+  },
+
+  {
+    id: "marcelo-zormann",
+    name: "Marcelo Zormann",
+    category: "Profissional | Duplas",
+    achievement:
+      "Campeão juvenil de Wimbledon 2014 • Melhor ranking: nº 92 ATP em duplas",
+    highlights: [
+      "Campeão juvenil de duplas de Wimbledon em 2014, ao lado de Orlando Luz.",
+      "Medalha de ouro nos Jogos Olímpicos da Juventude de 2014, também com Orlando Luz.",
+      "Melhor ranking ATP de duplas da carreira: nº 92 do mundo.",
+      "Atual presença no Top 200 ATP de duplas.",
+      "Experiência em torneios Challenger e competições profissionais internacionais.",
+    ],
+    image: atleta5,
+    bio:
+      "Marcelo Zormann é tenista profissional brasileiro com trajetória de destaque desde o circuito juvenil. Atualmente tem forte atuação nas duplas e compete regularmente no circuito profissional internacional.",
+    status: "Ativo no Circuito Profissional",
+  },
+
+  {
+    id: "eduardo-ribeiro",
+    name: "Eduardo Ribeiro",
+    category: "Profissional | Simples e Duplas",
+    achievement:
+      "Melhor ranking: nº 316 ATP em simples • atuação regular em Challenger e ITF",
+    highlights: [
+      "Melhor ranking ATP de simples da carreira: nº 316.",
+      "Atual presença entre os principais brasileiros do ranking profissional.",
+      "Ranking de duplas próximo ao Top 150/200 ATP em 2026.",
+      "Participação regular em torneios Challenger e ITF.",
+      "Experiência no circuito profissional nacional e internacional.",
+    ],
+    image: atleta6,
+    bio:
+      "Eduardo Ribeiro é tenista profissional brasileiro com atuação nos circuitos ATP Challenger e ITF. Compete tanto em simples quanto em duplas e integra o grupo de atletas profissionais ligados à ADK Tennis.",
+    status: "Ativo no Circuito Profissional",
+  },
+
   {
     id: "luiza-fullana",
     name: "Luiza Fullana",
-    category: "Profissional",
-    achievement: "Campeã do W15 de Brasília 2026",
+    category: "Profissional | Simples e Duplas",
+    achievement:
+      "Sete títulos profissionais de simples • Melhor ranking: nº 457 WTA",
     highlights: [
-      "Campeã do W15 de Brasília em junho de 2026",
-      "Atleta da ADK PlayTennis Brasília",
-      "Semana de competição marcada por atuações consistentes e de alto nível",
-      "Destaque em torneios profissionais do circuito feminino",
+      "Campeã do ITF W15 de Brasília em 2026.",
+      "Campeã do ITF W15 de Campos do Jordão em 2026.",
+      "Sete títulos profissionais de simples conquistados até agosto de 2026.",
+      "Melhor ranking de simples da carreira: nº 457 WTA.",
+      "Melhor ranking de duplas da carreira: Top 400 WTA.",
+      "Atleta da ADK PlayTennis Brasília.",
     ],
     image: atleta2,
-    bio: "Luiza Fullana é uma das atletas em destaque da ADK PlayTennis Brasília. Em 2026, conquistou o título do W15 de Brasília, demonstrando alto nível técnico, consistência competitiva e evolução constante no circuito profissional feminino.",
+    bio:
+      "Luiza Fullana é atleta da ADK PlayTennis Brasília e compete no circuito profissional feminino. Em 2026, vive uma temporada de evolução, conquistando títulos profissionais e alcançando seus melhores rankings da carreira.",
     status: "Ativa no Circuito Profissional",
   },
 ];
@@ -278,7 +378,7 @@ Vagas limitadas.`,
     id: "campea-w15-de-brasilia",
     title: "CAMPEÃ W15 DE BRASÍLIA",
     summary:
-      "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília,",
+      "A atleta da ADK Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília,",
     date: "8 de junho de 2026",
     content:
       "A atleta da ADK PlayTennis Brasília, Luiza Fullana, conquistou neste domingo o título do W15 de Brasília, coroando uma grande semana de competição com atuações consistentes e de alto nível.",
@@ -321,7 +421,6 @@ export const units = [
       "Pista para corrida e preparação física",
       "Vestiários completos",
       "Restaurante e cafeteria",
-      "Loja de artigos esportivos",
       "Estrutura integrada ao Itamirim Clube de Campo",
     ],
 

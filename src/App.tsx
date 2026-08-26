@@ -102,7 +102,7 @@ export default function App() {
                     METODOLOGIA INTEGRADA DE ALTA PERFORMANCE
                   </span>
                   <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-white leading-none">
-                    POR QUE TREINAR NA{" "}
+                    POR QUE TREINAR NA{" "}<br className="lg:hidden block" />
                     <span className="text-adk-yellow">ADK TENNIS</span>?
                   </h2>
                   <p className="text-zinc-400 font-sans text-xs">
