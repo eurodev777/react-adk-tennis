@@ -31,12 +31,12 @@ import noticia1 from "./assets/noticia-1.jpg";
 import noticia2 from "./assets/noticia-2.jpg";
 import noticia3 from "./assets/noticia-3.jpg";
 // ATLETA
-import atleta1 from "./assets/atleta-1.jpeg";
-import atleta2 from "./assets/atleta-2.jpeg";
-import atleta3 from "./assets/atleta-3.jpeg";
-import atleta4 from "./assets/atleta-1.jpeg";
-import atleta5 from "./assets/atleta-2.jpeg";
-import atleta6 from "./assets/atleta-3.jpeg";
+import atleta1 from "./assets/atletas/Rafael-Matos.jpeg";
+import atleta2 from "./assets/atletas/Orlando-Luz.jpeg";
+import atleta3 from "./assets/atletas/Igor-Marcondes.jpeg";
+import atleta4 from "./assets/atletas/Marcelo-Zormann.jpeg";
+import atleta5 from "./assets/atletas/Eduardo-Ribeiro.jpeg";
+import atleta6 from "./assets/atletas/Luiza-Fullana.jpeg";
 // PATROCINADORES
 import playtennis from "./assets/play-tennis.jpeg";
 import cbc from "./assets/cbc.jpeg";
@@ -253,7 +253,6 @@ export const athletes: Athlete[] = [
       "Rafael Matos é um dos principais duplistas brasileiros da atualidade. Campeão de Grand Slam e vencedor de diversos títulos ATP, representa o Brasil no circuito internacional e integra o trabalho de alto rendimento da ADK Tennis.",
     status: "Ativo no Circuito ATP",
   },
-
   {
     id: "orlando-luz",
     name: "Orlando Luz",
@@ -268,12 +267,11 @@ export const athletes: Athlete[] = [
       "Medalha de prata em simples nos Jogos Olímpicos da Juventude de 2014.",
       "Ex-nº 1 mundial juvenil e Top 15 ATP em duplas em 2026.",
     ],
-    image: atleta3,
+    image: atleta2,
     bio:
       "Orlando Luz construiu uma trajetória de destaque desde o circuito juvenil e atualmente compete entre os principais duplistas do circuito ATP. Ao lado de Rafael Matos, vive uma das melhores temporadas de sua carreira em 2026.",
     status: "Ativo no Circuito ATP",
   },
-
   {
     id: "igor-marcondes",
     name: "Igor Marcondes",
@@ -288,12 +286,11 @@ export const athletes: Athlete[] = [
       "Treinado por Patricio Arnold e Luiz Peniza.",
       "Atleta ligado à ADK Tennis e à estrutura de treinamento de Itajaí.",
     ],
-    image: atleta4,
+    image: atleta3,
     bio:
       "Igor Marcondes é tenista profissional brasileiro e atleta ligado à estrutura de alto rendimento da ADK Tennis. Canhoto, compete nos circuitos ATP Challenger e ITF em simples e duplas.",
     status: "Ativo no Circuito Profissional",
   },
-
   {
     id: "marcelo-zormann",
     name: "Marcelo Zormann",
@@ -307,12 +304,11 @@ export const athletes: Athlete[] = [
       "Atual presença no Top 200 ATP de duplas.",
       "Experiência em torneios Challenger e competições profissionais internacionais.",
     ],
-    image: atleta5,
+    image: atleta4,
     bio:
       "Marcelo Zormann é tenista profissional brasileiro com trajetória de destaque desde o circuito juvenil. Atualmente tem forte atuação nas duplas e compete regularmente no circuito profissional internacional.",
     status: "Ativo no Circuito Profissional",
   },
-
   {
     id: "eduardo-ribeiro",
     name: "Eduardo Ribeiro",
@@ -326,12 +322,11 @@ export const athletes: Athlete[] = [
       "Participação regular em torneios Challenger e ITF.",
       "Experiência no circuito profissional nacional e internacional.",
     ],
-    image: atleta6,
+    image: atleta5,
     bio:
       "Eduardo Ribeiro é tenista profissional brasileiro com atuação nos circuitos ATP Challenger e ITF. Compete tanto em simples quanto em duplas e integra o grupo de atletas profissionais ligados à ADK Tennis.",
     status: "Ativo no Circuito Profissional",
   },
-
   {
     id: "luiza-fullana",
     name: "Luiza Fullana",
@@ -346,7 +341,7 @@ export const athletes: Athlete[] = [
       "Melhor ranking de duplas da carreira: Top 400 WTA.",
       "Atleta da ADK PlayTennis Brasília.",
     ],
-    image: atleta2,
+    image: atleta6,
     bio:
       "Luiza Fullana é atleta da ADK PlayTennis Brasília e compete no circuito profissional feminino. Em 2026, vive uma temporada de evolução, conquistando títulos profissionais e alcançando seus melhores rankings da carreira.",
     status: "Ativa no Circuito Profissional",

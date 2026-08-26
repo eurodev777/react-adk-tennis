@@ -70,7 +70,7 @@ export const AthletesSection: React.FC = () => {
               <img
                 src={activeAthlete.image}
                 alt={activeAthlete.name}
-                className="w-full h-full object-cover object-center brightness-90 transition-all duration-500"
+                className="w-full h-full object-cover object-top brightness-90 transition-all duration-500"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-adk-dark via-adk-dark/35 to-transparent z-10" />
