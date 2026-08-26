@@ -32,7 +32,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
     {
       id: "atletas",
       label: "Atletas",
-      badge: "Grand Slam",
       customClass: "bg-adk-yellow text-zinc-950 hover:bg-white tracking-widest",
     },
   ];
@@ -133,9 +132,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
                 id={`nav-highlighted-${hl.id}`}
               >
                 {hl.label}
-                <span className="text-[7px] font-mono px-1 py-0.5 rounded bg-black/40 text-white block">
-                  {hl.badge}
-                </span>
               </button>
             );
           })}
@@ -183,9 +179,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
                 id={`mobile-hl-${hl.id}`}
               >
                 <span>{hl.label}</span>
-                <span className="text-[7.5px] font-mono opacity-80 uppercase scale-90">
-                  {hl.badge}
-                </span>
               </button>
             ))}
           </div>
