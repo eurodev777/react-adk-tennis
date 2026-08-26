@@ -59,7 +59,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
           <h2 className="text-xl md:text-5xl font-black font-display uppercase tracking-tighter leading-none">
             PROGRAMAS DE{" "}
             <span className="text-adk-yellow">TREINAMENTO ADK</span>
-          </h2> http://localhost:3000/
+          </h2>
 
           <p className="text-zinc-400 font-sans text-sm">
             Programas de treinamento para diferentes idades, níveis e objetivos,
