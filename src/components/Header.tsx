@@ -80,9 +80,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
             <h1 className="text-lg font-bold tracking-tight leading-none uppercase text-white group-hover:text-adk-yellow transition-colors">
               ADK Tennis
             </h1>
-            <p className="text-[10px] text-adk-yellow uppercase tracking-[0.2em] font-medium leading-none mt-1">
-            Academia de Alto Rendimento
-            </p>
           </div>
         </button>
 

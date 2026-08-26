@@ -56,10 +56,10 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
             METODOLOGIA ADK TENNIS
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-black font-display uppercase tracking-tighter leading-none">
+          <h2 className="text-xl md:text-5xl font-black font-display uppercase tracking-tighter leading-none">
             PROGRAMAS DE{" "}
             <span className="text-adk-yellow">TREINAMENTO ADK</span>
-          </h2>
+          </h2> http://localhost:3000/
 
           <p className="text-zinc-400 font-sans text-sm">
             Programas de treinamento para diferentes idades, níveis e objetivos,
