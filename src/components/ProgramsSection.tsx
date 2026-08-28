@@ -80,13 +80,28 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
               return (
                 <button
                   key={prog.id}
-                  onClick={() => {
-                    setSelectedProgram(prog.id);
-                    setFormData((prev) => ({
-                      ...prev,
-                      programId: prog.id,
-                    }));
-                  }}
+onClick={() => {
+  setSelectedProgram(prog.id);
+
+  setFormData((prev) => ({
+    ...prev,
+    programId: prog.id,
+  }));
+
+  // No mobile, rola até os detalhes do programa
+  if (window.innerWidth < 1024) {
+    setTimeout(() => {
+      const details = document.getElementById("programs-detail-column");
+
+      if (details) {
+        details.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  }
+}}
                   className={`w-full text-left p-5 rounded border transition-all duration-300 relative cursor-pointer block ${
                     isSelected
                       ? "bg-adk-card border-adk-yellow shadow-lg shadow-adk-yellow/10 translate-x-2"
