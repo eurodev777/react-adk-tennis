@@ -19,6 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
     { id: "intensivo", label: "Intensivo" },
     { id: "noticias", label: "Notícias" },
     { id: "contato", label: "Contato" },
+    { id: "atletas", label: "Atletas" },
   ];
 
   const highlightedItems = [
@@ -30,8 +31,8 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
     //     "border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 hover:shadow-cyan-400",
     // },
     {
-      id: "atletas",
-      label: "Atletas",
+      id: "contato",
+      label: "QUERO TREINAR NA ADK",
       customClass: "bg-adk-yellow text-zinc-950 hover:bg-white tracking-widest",
     },
   ];

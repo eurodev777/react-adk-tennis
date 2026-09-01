@@ -56,7 +56,7 @@ export const banners: Banner[] = [
   {
     id: 1,
     title: "ADK TENNIS",
-    subtitle: "Academia de Alto Rendimento",
+    subtitle: "DA FORMAÇÃO AO ALTO RENDIMENTO",
     description:
       "Há mais de 20 anos, a ADK Tennis desenvolve atletas através de uma metodologia construída dentro do tênis de alto rendimento. Com uma equipe altamente qualificada e uma estrutura completa, oferece um ambiente preparado para a evolução técnica, física, tática e mental de atletas em formação e competição.",
     badge: null,

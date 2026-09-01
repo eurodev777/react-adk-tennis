@@ -172,9 +172,9 @@ export default function App() {
                           METODOLOGIA ADK TENNIS
                         </span> */}
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          METODOLOGIA
+                          CONHEÇA NOSSA
                           <br />
-                          <span className="text-adk-yellow">ADK TENNIS</span>
+                          <span className="text-adk-yellow">METODOLOGIA</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
                           Uma metodologia construída ao longo de mais de 20 anos
@@ -203,9 +203,9 @@ export default function App() {
                       </div>
                       <div className="mt-12">
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          EQUIPE
+                          CONHEÇA NOSSA
                           <br />
-                          <span className="text-adk-yellow">ESPECIALIZADA</span>
+                          <span className="text-adk-yellow">EQUIPE</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
                           Treinadores com experiência no alto rendimento e
@@ -214,10 +214,10 @@ export default function App() {
                         </p>
                       </div>
                       <button
-                        onClick={() => handleNavigateTab("unidades")}
+                        onClick={() => handleNavigateTab("equipe")}
                         className="border border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
                       >
-                        Visualizar Unidades
+                        Conhecer Equipe
                       </button>
                     </div>
                   </div>
@@ -233,9 +233,9 @@ export default function App() {
                       </div>
                       <div className="mt-12">
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          ESTRUTURA PREPARADA
+                          CONHEÇA NOSSAS
                           <br />
-                          <span className="text-adk-yellow">PARA EVOLUIR</span>
+                          <span className="text-adk-yellow">UNIDADES</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
                           Ambientes planejados para oferecer treinamento de alto
@@ -245,10 +245,10 @@ export default function App() {
                         </p>
                       </div>
                       <button
-                        onClick={() => handleNavigateTab("atletas")}
+                        onClick={() => handleNavigateTab("unidades")}
                         className="border border-adk-yellow text-adk-yellow hover:bg-adk-yellow hover:text-zinc-950 px-4 py-2 text-xs font-bold uppercase tracking-widest self-start transition-all duration-300 cursor-pointer"
                       >
-                        Nossos Atletas
+                        Nossas Unidades
                       </button>
                     </div>
                   </div>
