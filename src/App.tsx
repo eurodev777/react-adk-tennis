@@ -233,8 +233,8 @@ export default function App() {
                       </div>
                       <div className="mt-12">
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          Estrutura Preparada para
-                          <br />
+                          Estrutura Preparada
+                          <br />para
                           <span className="text-adk-yellow">Evoluir</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
