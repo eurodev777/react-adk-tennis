@@ -8,8 +8,8 @@ import {
   TeamMember,
 } from "./types";
 // BANNER
-import banner1 from "./assets/slide1.png";
-import banner2 from "./assets/slide2.png";
+import banner1 from "./assets/home1.jpeg";
+import banner2 from "./assets/home2.jpeg";
 import banner3 from "./assets/slide3.png";
 // UNIDADES
 import itajai from "./assets/itajai.jpeg";
