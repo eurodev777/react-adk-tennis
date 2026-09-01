@@ -45,6 +45,12 @@ import cbt from "./assets/cbt.jpeg";
 import kirschbaum from "./assets/kirschbaum.jpeg";
 import promenac from "./assets/promenac.jpeg";
 import utr from "./assets/utr.jpeg";
+// PROGRAMAS
+import babytenis from "./assets/baby-tenis.jpeg"
+import adkkids from "./assets/adk-kids.jpeg"
+import precompeticao from "./assets/pre-competicao.jpeg"
+import competicao from "./assets/competicao.jpeg"
+import altorendimento from "./assets/alto-rendimento.jpeg"
 
 export const banners: Banner[] = [
   {
@@ -151,7 +157,7 @@ export const programs: Program[] = [
       "Turmas de 4 a 8 alunos",
     ],
     image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+      babytenis,
   },
 
   {
@@ -169,8 +175,7 @@ export const programs: Program[] = [
       "1 hora de duração",
       "Turmas de 4 a 6 alunos",
     ],
-    image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+    image: adkkids,
   },
 
   {
@@ -188,8 +193,7 @@ export const programs: Program[] = [
       "1 hora de treino em quadra",
       "Preparação física",
     ],
-    image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+    image: precompeticao,
   },
 
   {
@@ -208,8 +212,7 @@ export const programs: Program[] = [
       "Treino de quadra",
       "Preparação física",
     ],
-    image:
-      "https://images.unsplash.com/photo-1502014822147-1aedfb0676e0?auto=format&fit=crop&q=80&w=600",
+    image: competicao,
   },
 
   {
@@ -228,8 +231,7 @@ export const programs: Program[] = [
       "De 3 a 6 horas de treinamento",
       "Foco no tênis profissional e/ou universitário",
     ],
-    image:
-      "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&q=80&w=600",
+    image: altorendimento,
   },
 ];
 
@@ -408,7 +410,7 @@ export const units = [
     description:
       "A unidade de Itajaí conta com uma estrutura completa para o desenvolvimento de atletas, reunindo quadras, preparação física, fisioterapia e diferentes recursos de suporte ao treinamento em um único ambiente.",
 
-    courts: "15 quadras de saibro, sendo 3 cobertas, e 2 quadras rápidas.",
+    courts: "15 quadras, sendo elas, 10 descobertas de saibro, 3 cobertas de saibro e 2 rápidas.",
 
     amenities: [
       "Academia completa para preparação física",

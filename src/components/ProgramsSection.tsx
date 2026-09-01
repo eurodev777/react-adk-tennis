@@ -135,7 +135,7 @@ export const ProgramsSection: React.FC<ProgramsSectionProps> = ({
               <img
                 src={activeProgram.image}
                 alt={activeProgram.title}
-                className="w-full h-full object-cover brightness-[0.5] transition-all duration-500"
+                className="w-full h-full object-cover object-[50%_30%] brightness-[0.5] transition-all duration-500"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-adk-card to-transparent" />
