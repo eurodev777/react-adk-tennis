@@ -54,7 +54,7 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
 
   const handleBannerAction = (id: number) => {
     if (id === 1) {
-      onNavigateTab("quemsomos");
+      onNavigateTab("programas");
     } else if (id === 2) {
       onOpenUnit("sp-sp");
     } else if (id === 3) {
@@ -302,7 +302,7 @@ export const BannerHero: React.FC<BannerHeroProps> = ({
                       cursor-pointer
                     "
                   >
-                    Conheça nossas unidades
+                    VISUALIZE NOSSAS UNIDADES
                   </button>
                 </div>
               </div>

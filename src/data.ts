@@ -62,7 +62,7 @@ export const banners: Banner[] = [
     badge: null,
     image: banner1,
     //"https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&q=80&w=1200",
-    linkText: "Conheça a ADK Tennis",
+    linkText: "CONHEÇA NOSSOS PROGRAMAS",
   },
   {
     id: 2,
