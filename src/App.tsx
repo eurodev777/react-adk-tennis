@@ -172,7 +172,7 @@ export default function App() {
                           METODOLOGIA ADK TENNIS
                         </span> */}
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
-                          Meotodologia
+                          Metodologia
                           <br />
                           <span className="text-adk-yellow">ADK Tennis</span>
                         </h3>
