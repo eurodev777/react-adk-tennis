@@ -273,6 +273,7 @@ export const TrabalheNaAdk: React.FC = () => {
                       id="trabalhe-nome"
                       type="text"
                       value={nome}
+                      name="nome"
                       onChange={(e) =>
                         setNome(e.target.value)
                       }
