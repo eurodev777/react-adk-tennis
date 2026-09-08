@@ -118,7 +118,6 @@ export const ContactSection: React.FC = () => {
       setSubmitted(true);
 
       // obrigado.html deve ficar na pasta pública do site React.
-      window.location.href = "/obrigado.html";
     } catch (error) {
       console.error("Erro ao enviar formulário ADK:", error);
 
