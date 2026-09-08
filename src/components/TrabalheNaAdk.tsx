@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 
 const API_URL =
-  "https://sothink.com.br/apiredeadk/api/inserirvaga";
+  "https://sothink.com.br/apiredeadk/trabelhe/inserir";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
