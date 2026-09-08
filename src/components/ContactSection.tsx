@@ -24,6 +24,8 @@ export const ContactSection: React.FC = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const selectedUnit = useMemo(
     () => units.find((unit) => unit.id === selectedUnitId) || units[0],
@@ -67,22 +69,67 @@ export const ContactSection: React.FC = () => {
     }
   };
 
-  const handleMessageSubmit = (e: React.FormEvent) => {
+  const handleMessageSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
 
-    setTimeout(() => {
-      setSubmitted(false);
+    if (submitting) return;
 
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        unitId: selectedUnitId,
-        topic: "Quero conhecer os programas de treinamento",
-        message: "",
-      });
-    }, 4500);
+    setSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const unit = units.find((item) => item.id === formData.unitId);
+
+      const body = new FormData();
+      body.append("nome", formData.name.trim());
+      body.append("telefone", formData.phone.trim());
+      body.append("email", formData.email.trim());
+      body.append("unidade", unit?.name || formData.unitId);
+      body.append("unidade_id", formData.unitId);
+      body.append("assunto", formData.topic);
+      body.append("mensagem", formData.message.trim());
+
+      const response = await fetch(
+        "https://sothink.com.br/apiredeadk/api/inserir",
+        {
+          method: "POST",
+          body,
+        }
+      );
+
+      let data: {
+        success?: boolean;
+        msg?: string;
+        id?: number;
+      } = {};
+
+      try {
+        data = await response.json();
+      } catch {
+        throw new Error(
+          "A API retornou uma resposta inválida. Verifique o endereço da API."
+        );
+      }
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.msg || "Não foi possível enviar o formulário.");
+      }
+
+      setSubmitted(true);
+
+      // obrigado.html deve ficar na pasta pública do site React.
+      window.location.href = "/obrigado.html";
+    } catch (error) {
+      console.error("Erro ao enviar formulário ADK:", error);
+
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Não foi possível enviar sua mensagem. Tente novamente."
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -443,11 +490,21 @@ export const ContactSection: React.FC = () => {
                   />
                 </div>
 
+                {submitError && (
+                  <div
+                    role="alert"
+                    className="rounded border border-red-500/40 bg-red-500/10 px-4 py-3 text-xs text-red-300"
+                  >
+                    {submitError}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-adk-yellow hover:bg-white text-zinc-950 font-black uppercase text-xs py-3 rounded tracking-wider transition-colors duration-200 flex justify-center items-center gap-2 cursor-pointer"
+                  disabled={submitting}
+                  className="w-full bg-adk-yellow hover:bg-white disabled:opacity-60 disabled:cursor-not-allowed text-zinc-950 font-black uppercase text-xs py-3 rounded tracking-wider transition-colors duration-200 flex justify-center items-center gap-2 cursor-pointer"
                 >
-                  ENVIAR MENSAGEM
+                  {submitting ? "ENVIANDO..." : "ENVIAR MENSAGEM"}
                   <Send className="w-3.5 h-3.5" />
                 </button>
               </form>
