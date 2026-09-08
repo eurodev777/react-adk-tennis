@@ -44,6 +44,7 @@ import abarra1 from "./assets/5unidades.png";
 import abarra2 from "./assets/20anos.png";
 import abarra3 from "./assets/30professores.png";
 import abarra4 from "./assets/300atletas.png";
+import { TrabalheNaAdk } from "./components/TrabalheNaAdk";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -234,7 +235,8 @@ export default function App() {
                       <div className="mt-12">
                         <h3 className="text-3xl font-black uppercase italic leading-none text-white mb-3">
                           Estrutura Preparada
-                          <br />para
+                          <br />
+                          para
                           <span className="text-adk-yellow"> Evoluir</span>
                         </h3>
                         <p className="text-xs text-zinc-400 font-sans leading-relaxed max-w-sm mb-6">
@@ -307,6 +309,8 @@ export default function App() {
         return <AthletesSection />;
       case "contato":
         return <ContactSection />;
+      case "trabalhe":
+        return <TrabalheNaAdk />;
       default:
         return (
           <div className="py-20 text-center text-zinc-400">
