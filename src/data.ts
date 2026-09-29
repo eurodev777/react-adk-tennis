@@ -404,7 +404,7 @@ Em parceria com a PlayTennis, nasce a ADK PlayTennis São Paulo.`,
 export const units = [
   {
     id: "itajaí-sede",
-    name: "ADK Itajaí",
+    name: "ADK Itajaí - Itamirim Clude de Campo",
     city: "Itajaí - SC",
 
     description:
@@ -425,7 +425,7 @@ export const units = [
 
     phone: "(47) 999153-1800",
 
-    email: "itamirim.tenis@gmail.com",
+    email: "itamirim.tenis@hotmail.com",
 
     image: itajai,
   },

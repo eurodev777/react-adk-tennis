@@ -9,10 +9,7 @@ interface HeaderProps {
   onNavigateTab: (tabId: string) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({
-  activeTab,
-  onNavigateTab,
-}) => {
+export const Header: React.FC<HeaderProps> = ({ activeTab, onNavigateTab }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const menuItems = [
@@ -43,6 +40,16 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   const handleTabClick = (id: string) => {
+    if (id === "noticias") {
+      window.open(
+        "https://www.instagram.com/adktennis/",
+        "_blank",
+        "noopener,noreferrer",
+      );
+      setMobileMenuOpen(false);
+      return;
+    }
+
     onNavigateTab(id);
     setMobileMenuOpen(false);
 

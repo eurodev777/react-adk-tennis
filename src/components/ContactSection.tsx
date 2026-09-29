@@ -18,7 +18,7 @@ export const ContactSection: React.FC = () => {
     name: "",
     phone: "",
     email: "",
-    unitId: "itajaí-sede",
+    unidade: units[0]?.name || "",
     topic: "Quero conhecer os programas de treinamento",
     message: "",
   });
@@ -41,9 +41,13 @@ export const ContactSection: React.FC = () => {
   const handleUnitSelection = (unitId: string) => {
     setSelectedUnitId(unitId);
 
+    const unidadeSelecionada = units.find(
+      (unit) => unit.id === unitId
+    );
+
     setFormData((prev) => ({
       ...prev,
-      unitId,
+      unidade: unidadeSelecionada?.name || "",
     }));
 
     // Aguarda a unidade selecionada ser renderizada e rola suavemente
@@ -58,14 +62,18 @@ export const ContactSection: React.FC = () => {
     });
   };
 
-  const handleFormUnitChange = (unitId: string) => {
+  const handleFormUnitChange = (unidade: string) => {
     setFormData((prev) => ({
       ...prev,
-      unitId,
+      unidade,
     }));
 
-    if (units.some((unit) => unit.id === unitId)) {
-      setSelectedUnitId(unitId);
+    const unidadeSelecionada = units.find(
+      (unit) => unit.name === unidade
+    );
+
+    if (unidadeSelecionada) {
+      setSelectedUnitId(unidadeSelecionada.id);
     }
   };
 
@@ -78,19 +86,16 @@ export const ContactSection: React.FC = () => {
     setSubmitError("");
 
     try {
-      const unit = units.find((item) => item.id === formData.unitId);
-
       const body = new FormData();
       body.append("nome", formData.name.trim());
       body.append("telefone", formData.phone.trim());
       body.append("email", formData.email.trim());
-      body.append("unidade", unit?.name || formData.unitId);
-      body.append("unidade_id", formData.unitId);
+      body.append("unidade", formData.unidade.trim());
       body.append("assunto", formData.topic);
       body.append("mensagem", formData.message.trim());
 
       const response = await fetch(
-        "https://sothink.com.br/apiredeadk/api/inserir",
+        "https://sothink.com.br/apiredeadk/api/inserir.php",
         {
           method: "POST",
           body,
@@ -118,6 +123,7 @@ export const ContactSection: React.FC = () => {
       setSubmitted(true);
 
       // obrigado.html deve ficar na pasta pública do site React.
+      
     } catch (error) {
       console.error("Erro ao enviar formulário ADK:", error);
 
@@ -413,17 +419,17 @@ export const ContactSection: React.FC = () => {
 
                   <select
                     required
-                    value={formData.unitId}
+                    value={formData.unidade}
                     onChange={(e) => handleFormUnitChange(e.target.value)}
                     className="w-full bg-zinc-950 border border-zinc-800 rounded px-4 py-2.5 text-xs text-zinc-300 focus:outline-none focus:border-adk-yellow"
                   >
                     {units.map((unit) => (
-                      <option key={unit.id} value={unit.id}>
+                      <option key={unit.id} value={unit.name}>
                         {unit.name}
                       </option>
                     ))}
 
-                    <option value="orientacao">
+                    <option value="Não sei / Quero orientação">
                       Não sei / Quero orientação
                     </option>
                   </select>
