@@ -45,6 +45,7 @@ import cbt from "./assets/cbt.jpeg";
 import kirschbaum from "./assets/kirschbaum.jpeg";
 import promenac from "./assets/promenac.jpeg";
 import utr from "./assets/utr.jpeg";
+import itamirim from "./assets/itamirim.png";
 // PROGRAMAS
 import babytenis from "./assets/baby-tenis.jpeg"
 import adkkids from "./assets/adk-kids.jpeg"
@@ -137,6 +138,13 @@ export const sponsors: Sponsor[] = [
     category: "Parceria",
     customSvgType: playtennis,
     websiteUrl: "https://www.playtennis.com.br",
+  },
+    {
+    id: 8,
+    name: "Itamirim",
+    category: "Parceria",
+    customSvgType: itamirim,
+    websiteUrl: "https://www.adktennis.com.br",
   },
 ];
 
