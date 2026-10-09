@@ -1,5 +1,5 @@
 import { ArrowUpRight, CalendarDays, MapPin, Sparkles } from "lucide-react";
-import pre27 from '../assets/pre27.jpeg'
+import pre27 from "../assets/pre27.jpeg";
 
 const linktreeUrl =
   "https://linktr.ee/PreTemporadaADK2027?utm_source=linktree_profile_share&ltsid=68abfab1-4d9d-443b-bf2e-60e115147ac9";
@@ -48,7 +48,8 @@ export function PreTemporadaDestaque() {
               <MapPin className="h-4 w-4 text-adk-yellow" /> 4 unidades
             </span>
             <span className="inline-flex items-center gap-2">
-              <CalendarDays className="h-4 w-4 text-adk-yellow" /> Novembro e dezembro
+              <CalendarDays className="h-4 w-4 text-adk-yellow" /> Novembro e
+              dezembro
             </span>
           </div>
 
@@ -67,12 +68,13 @@ export function PreTemporadaDestaque() {
         </div>
 
         <div className="relative flex min-h-[290px] items-end overflow-hidden bg-adk-yellow lg:min-h-[520px]">
-            <img
-              src={pre27}
-              alt="Atletas da ADK em treinamento de tênis"
-              className="absolute inset-0 h-full w-full object-cover"
-              loading="lazy"
-            />
+          <img
+            src={pre27}
+            alt="Atletas da ADK em treinamento de tênis"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-zinc-950/10" />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-zinc-950/10" />
           <div className="absolute -right-5 top-0 select-none font-display text-[10rem] font-black italic leading-none tracking-tighter text-white/10 sm:text-[14rem] lg:top-6 lg:text-[17rem]">
             27
