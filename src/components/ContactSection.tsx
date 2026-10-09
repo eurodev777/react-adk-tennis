@@ -95,7 +95,7 @@ export const ContactSection: React.FC = () => {
       body.append("mensagem", formData.message.trim());
 
       const response = await fetch(
-        "https://sothink.com.br/apiredeadk/api/inserir.php",
+        "https://adktennis.com.br/apiredeadk/api/inserir",
         {
           method: "POST",
           body,

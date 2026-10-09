@@ -45,12 +45,15 @@ import abarra2 from "./assets/20anos.png";
 import abarra3 from "./assets/30professores.png";
 import abarra4 from "./assets/300atletas.png";
 import { TrabalheNaAdk } from "./components/TrabalheNaAdk";
+import { PreTemporadaDestaque } from "./components/PreTemporadaDestaque";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<string>("home");
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterSubscribed, setNewsletterSubscribed] = useState(false);
   const [initialUnit, setInitialUnit] = useState("itajaí-sede");
+  const [newsletterLoading, setNewsletterLoading] = useState(false);
+  const [newsletterError, setNewsletterError] = useState("");
 
   const handleOpenUnit = (unitId: string) => {
     setInitialUnit(unitId);
@@ -66,14 +69,38 @@ export default function App() {
     setActiveTab(tabId);
   };
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const NEWSLETTER_API = "https://adktennis.com.br/apiredeadk/newsletter/";
+
+  const handleNewsletterSubmit = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ) => {
     e.preventDefault();
-    if (newsletterEmail) {
+    if (!newsletterEmail.trim() || newsletterLoading) return;
+    setNewsletterLoading(true);
+    setNewsletterError("");
+    try {
+      const response = await fetch(NEWSLETTER_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail.trim() }),
+      });
+      const data = await response.json();
+      if (!response.ok || !data.sucesso) {
+        throw new Error(
+          data.mensagem || "Não foi possível cadastrar seu e-mail.",
+        );
+      }
       setNewsletterSubscribed(true);
-      setTimeout(() => {
-        setNewsletterSubscribed(false);
-        setNewsletterEmail("");
-      }, 4000);
+      setNewsletterEmail("");
+      setTimeout(() => setNewsletterSubscribed(false), 4000);
+    } catch (error) {
+      setNewsletterError(
+        error instanceof Error
+          ? error.message
+          : "Erro ao conectar com o servidor.",
+      );
+    } finally {
+      setNewsletterLoading(false);
     }
   };
 
@@ -277,7 +304,7 @@ export default function App() {
                     </p>
                   </div>
                   <button
-                    onClick={() => handleNavigateTab("intensivo")}
+                    onClick={() => handleNavigateTab("contato")}
                     className="bg-adk-yellow hover:bg-white text-zinc-950 px-6 py-3.5 rounded text-xs font-bold uppercase tracking-wider transform hover:-translate-y-0.5 duration-200 cursor-pointer text-center whitespace-nowrap shrink-0"
                   >
                     AGENDAR TREINO TESTE
@@ -295,8 +322,19 @@ export default function App() {
         return <TeamSection />;
       case "programas":
         return <ProgramsSection onNavigateTab={handleNavigateTab} />;
+
       case "intensivo":
-        return <IntensivoSection />;
+        return (
+          <>
+            <div className="px-4 sm:px-6 lg:px-8">
+              <PreTemporadaDestaque
+                onView={() => handleNavigateTab("pretemporada2027")}
+              />
+            </div>
+
+            <IntensivoSection />
+          </>
+        );
       case "regiao":
         return <AboutSection onNavigateTab={handleNavigateTab} />; // sub-tab within About composite
       case "projeto":
@@ -369,21 +407,32 @@ export default function App() {
                 Informativo Assinado! Prepare-se para elevar sua performance.
               </div>
             ) : (
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                <input
-                  type="email"
-                  required
-                  placeholder="Seu melhor e-mail esportivo"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-adk-yellow flex-1"
-                />
-                <button
-                  type="submit"
-                  className="bg-adk-yellow hover:bg-white text-zinc-950 text-xs font-black uppercase py-3 px-6 rounded tracking-wider transition-colors cursor-pointer"
-                >
-                  Cadastrar
-                </button>
+              <form
+                onSubmit={handleNewsletterSubmit}
+                className="flex flex-col gap-2"
+              >
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    required
+                    placeholder="Seu melhor e-mail esportivo"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    className="bg-zinc-900 border border-zinc-800 rounded px-4 py-3 text-xs text-white focus:outline-none focus:border-adk-yellow flex-1 min-w-0"
+                  />
+                  <button
+                    type="submit"
+                    disabled={newsletterLoading}
+                    className="bg-adk-yellow hover:bg-white disabled:opacity-50 text-zinc-950 text-xs font-black uppercase py-3 px-6 rounded tracking-wider transition-colors cursor-pointer"
+                  >
+                    {newsletterLoading ? "Enviando..." : "Cadastrar"}
+                  </button>
+                </div>
+                {newsletterError && (
+                  <p role="alert" className="text-red-400 text-xs">
+                    {newsletterError}
+                  </p>
+                )}
               </form>
             )}
           </div>

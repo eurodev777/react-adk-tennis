@@ -10,8 +10,7 @@ import {
   User,
 } from "lucide-react";
 
-const API_URL =
-  "https://sothink.com.br/apiredeadk/trabalhe/inserir";
+const API_URL = "https://adktennis.com.br/apiredeadk/trabalhe/inserir";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024;
 
@@ -35,10 +34,7 @@ export const TrabalheNaAdk: React.FC = () => {
       return;
     }
 
-    const extensao = file.name
-      .split(".")
-      .pop()
-      ?.toLowerCase();
+    const extensao = file.name.split(".").pop()?.toLowerCase();
 
     if (!["pdf", "doc", "docx"].includes(extensao || "")) {
       setCurriculo(null);
@@ -47,9 +43,7 @@ export const TrabalheNaAdk: React.FC = () => {
         fileInputRef.current.value = "";
       }
 
-      setErro(
-        "Envie o currículo em PDF, DOC ou DOCX."
-      );
+      setErro("Envie o currículo em PDF, DOC ou DOCX.");
 
       return;
     }
@@ -61,9 +55,7 @@ export const TrabalheNaAdk: React.FC = () => {
         fileInputRef.current.value = "";
       }
 
-      setErro(
-        "O currículo deve ter no máximo 5 MB."
-      );
+      setErro("O currículo deve ter no máximo 5 MB.");
 
       return;
     }
@@ -71,24 +63,31 @@ export const TrabalheNaAdk: React.FC = () => {
     setCurriculo(file);
   };
 
-  const handleSubmit = async (
-    event: FormEvent<HTMLFormElement>
-  ) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setErro("");
     setSucesso(false);
 
-    if (
-      !nome.trim() ||
-      !email.trim() ||
-      !whatsapp.trim() ||
-      !curriculo
-    ) {
-      setErro(
-        "Preencha todos os campos e anexe seu currículo."
-      );
+    if (!nome.trim()) {
+      setErro("Informe seu nome.");
+      return;
+    }
 
+    if (!email.trim()) {
+      setErro("Informe seu e-mail.");
+      return;
+    }
+
+    if (!whatsapp.trim()) {
+      setErro("Informe seu WhatsApp.");
+      return;
+    }
+
+    const arquivo = curriculo || fileInputRef.current?.files?.[0];
+
+    if (!arquivo) {
+      setErro("Selecione seu currículo antes de enviar.");
       return;
     }
 
@@ -97,11 +96,19 @@ export const TrabalheNaAdk: React.FC = () => {
     dados.append("nome", nome.trim());
     dados.append("email", email.trim());
     dados.append("whatsapp", whatsapp.trim());
-    dados.append("curriculo", curriculo);
+    dados.append("curriculo", arquivo, arquivo.name);
 
     setEnviando(true);
 
     try {
+      console.log("Enviando candidatura:", {
+        nome: nome.trim(),
+        email: email.trim(),
+        whatsapp: whatsapp.trim(),
+        curriculo: arquivo.name,
+        tamanho: arquivo.size,
+      });
+
       const response = await fetch(API_URL, {
         method: "POST",
         body: dados,
@@ -112,29 +119,29 @@ export const TrabalheNaAdk: React.FC = () => {
 
       const texto = await response.text();
 
-      let resultado: {
-        success?: boolean;
-        msg?: string;
-      };
+      console.log("HTTP STATUS:", response.status);
+      console.log("RESPOSTA DA API:", texto);
+
+      let resultado;
 
       try {
         resultado = JSON.parse(texto);
       } catch {
-        console.error(
-          "Resposta recebida do servidor:",
-          texto
-        );
+        throw new Error("A API não retornou JSON válido. Confira o console.");
+      }
 
+      if (
+        !response.ok ||
+        resultado.success === false ||
+        resultado.success === 0
+      ) {
         throw new Error(
-          "O servidor não retornou uma resposta JSON válida."
+          resultado.msg || resultado.message || "Erro ao enviar currículo.",
         );
       }
 
-      if (!response.ok || !resultado.success) {
-        throw new Error(
-          resultado.msg ||
-            "Não foi possível enviar sua candidatura."
-        );
+      if (resultado.success !== true && resultado.success !== 1) {
+        throw new Error("A API não confirmou o recebimento do currículo.");
       }
 
       setSucesso(true);
@@ -147,12 +154,12 @@ export const TrabalheNaAdk: React.FC = () => {
         fileInputRef.current.value = "";
       }
     } catch (error) {
-      console.error(error);
+      console.error("ERRO NO ENVIO:", error);
 
       setErro(
         error instanceof Error
           ? error.message
-          : "Erro ao enviar sua candidatura."
+          : "Não foi possível enviar seu currículo.",
       );
     } finally {
       setEnviando(false);
@@ -173,16 +180,12 @@ export const TrabalheNaAdk: React.FC = () => {
 
           <h2 className="font-black uppercase text-white text-4xl md:text-6xl tracking-tight leading-[0.95]">
             Quero trabalhar
-            <span className="text-adk-yellow">
-              {" "}
-              na ADK
-            </span>
+            <span className="text-adk-yellow"> na ADK</span>
           </h2>
 
           <p className="mt-5 text-zinc-400 max-w-2xl text-sm md:text-base leading-relaxed">
-            Preencha seus dados e envie seu currículo.
-            Nossa equipe receberá sua candidatura para
-            avaliação.
+            Preencha seus dados e envie seu currículo. Nossa equipe receberá sua
+            candidatura para avaliação.
           </p>
         </div>
 
@@ -193,8 +196,8 @@ export const TrabalheNaAdk: React.FC = () => {
             </h3>
 
             <p className="text-zinc-500 text-sm leading-relaxed mt-3">
-              Buscamos profissionais comprometidos com
-              excelência, esporte e desenvolvimento.
+              Buscamos profissionais comprometidos com excelência, esporte e
+              desenvolvimento.
             </p>
 
             <div className="mt-7 pt-7 border-t border-zinc-800 space-y-4">
@@ -220,9 +223,7 @@ export const TrabalheNaAdk: React.FC = () => {
                     Tamanho máximo
                   </strong>
 
-                  <span className="text-zinc-500 text-xs">
-                    5 MB
-                  </span>
+                  <span className="text-zinc-500 text-xs">5 MB</span>
                 </div>
               </div>
             </div>
@@ -240,8 +241,7 @@ export const TrabalheNaAdk: React.FC = () => {
                 </h3>
 
                 <p className="text-zinc-400 text-sm max-w-md mt-3">
-                  Sua candidatura foi recebida com sucesso
-                  pela ADK Tennis.
+                  Sua candidatura foi recebida com sucesso pela ADK Tennis.
                 </p>
 
                 <button
@@ -274,9 +274,7 @@ export const TrabalheNaAdk: React.FC = () => {
                       type="text"
                       value={nome}
                       name="nome"
-                      onChange={(e) =>
-                        setNome(e.target.value)
-                      }
+                      onChange={(e) => setNome(e.target.value)}
                       required
                       maxLength={150}
                       placeholder="Seu nome completo"
@@ -301,9 +299,7 @@ export const TrabalheNaAdk: React.FC = () => {
                         id="trabalhe-email"
                         type="email"
                         value={email}
-                        onChange={(e) =>
-                          setEmail(e.target.value)
-                        }
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                         maxLength={180}
                         placeholder="voce@email.com"
@@ -327,9 +323,7 @@ export const TrabalheNaAdk: React.FC = () => {
                         id="trabalhe-whatsapp"
                         type="tel"
                         value={whatsapp}
-                        onChange={(e) =>
-                          setWhatsapp(e.target.value)
-                        }
+                        onChange={(e) => setWhatsapp(e.target.value)}
                         required
                         maxLength={30}
                         autoComplete="tel"
@@ -361,19 +355,13 @@ export const TrabalheNaAdk: React.FC = () => {
                         </strong>
 
                         <span className="text-zinc-500 text-xs mt-1">
-                          {(
-                            curriculo.size /
-                            1024 /
-                            1024
-                          ).toFixed(2)}{" "}
-                          MB
+                          {(curriculo.size / 1024 / 1024).toFixed(2)} MB
                         </span>
                       </>
                     ) : (
                       <>
                         <strong className="text-white text-sm">
-                          Clique para selecionar seu
-                          currículo
+                          Clique para selecionar seu currículo
                         </strong>
 
                         <span className="text-zinc-500 text-xs mt-1">
@@ -385,15 +373,14 @@ export const TrabalheNaAdk: React.FC = () => {
                     <input
                       ref={fileInputRef}
                       id="trabalhe-curriculo"
+                      name="curriculo"
                       type="file"
-                      accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                      onChange={(e) =>
-                        handleFile(
-                          e.target.files?.[0] || null
-                        )
-                      }
-                      required
-                      className="hidden"
+                      accept=".pdf,.doc,.docx"
+                      onChange={(e) => {
+                        const arquivo = e.currentTarget.files?.[0] ?? null;
+                        handleFile(arquivo);
+                      }}
+                      className="sr-only"
                     />
                   </label>
                 </div>
