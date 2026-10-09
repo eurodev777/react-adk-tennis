@@ -7,6 +7,8 @@ import {
   Sparkles,
 } from "lucide-react";
 
+
+
 type IntensivoFormData = {
   name: string;
   age: string;

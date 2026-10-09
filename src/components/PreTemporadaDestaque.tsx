@@ -1,16 +1,11 @@
 import { ArrowUpRight, CalendarDays, MapPin, Sparkles } from "lucide-react";
-
-type PreTemporadaDestaqueProps = {
-  backgroundImage?: string;
-};
+import pre27 from '../assets/pre27.jpeg'
 
 const linktreeUrl =
   "https://linktr.ee/PreTemporadaADK2027?utm_source=linktree_profile_share&ltsid=68abfab1-4d9d-443b-bf2e-60e115147ac9";
 
 /** Banner para posicionar dentro da aba INTENSIVO. */
-export function PreTemporadaDestaque({
-  backgroundImage,
-}: PreTemporadaDestaqueProps) {
+export function PreTemporadaDestaque() {
   return (
     <section
       aria-labelledby="adk-pretemporada-destaque-title"
@@ -72,23 +67,12 @@ export function PreTemporadaDestaque({
         </div>
 
         <div className="relative flex min-h-[290px] items-end overflow-hidden bg-adk-yellow lg:min-h-[520px]">
-          {backgroundImage ? (
             <img
-              src={backgroundImage}
+              src={pre27}
               alt="Atletas da ADK em treinamento de tênis"
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
-          ) : (
-            <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(145deg, #1b2220 0%, #394b28 52%, #090d0a 100%)",
-              }}
-            />
-          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-zinc-950/10" />
           <div className="absolute -right-5 top-0 select-none font-display text-[10rem] font-black italic leading-none tracking-tighter text-white/10 sm:text-[14rem] lg:top-6 lg:text-[17rem]">
             27
